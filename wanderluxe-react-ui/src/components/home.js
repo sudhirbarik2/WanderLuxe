@@ -41,8 +41,7 @@ class Home extends Component {
                     <div className="container d-flex h-100 align-items-center">
                         <div className="mx-auto text-center">
                             <h1 className="mx-auto my-0 text-uppercase">Wanderluxe</h1>
-                            <h2 className="text-white-50 mx-auto mt-2 mb-5">All that is gold does not glitter,
-                    Not all those who wander are lost.</h2>
+                            <h2 className="text-white-50 mx-auto mt-2 mb-5">Where Every Journey Begins with Elegance</h2>
                             <div className="form-inline d-flex">
                                 <input
                                     type="text"
@@ -53,7 +52,7 @@ class Home extends Component {
                                     id="continent"
                                     placeholder="Where?"
                                 />&nbsp;
-                    <button className="btn btn-primary mx-auto" onClick={this.getPackages}>Search</button>
+                    <button className="btn btn-outline-warning btnConfig mx-auto" onClick={this.getPackages}>Search</button>
 
                             </div>
                         </div>
@@ -120,7 +119,7 @@ class Home extends Component {
                                     <div className="card-body text-center">
                                         <h4 className="text-uppercase m-0">Address</h4>
                                         <hr className="my-4" />
-                                        <div className="small text-black-50">Infosys, Mysuru</div>
+                                        <div className="small text-black-50">Howrah, West Bengal, India</div>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +129,7 @@ class Home extends Component {
                                     <div className="card-body text-center">
                                         <h4 className="text-uppercase m-0">Email</h4>
                                         <hr className="my-4" />
-                                        <div className="small text-black-50"><Link to="/home">sudhir.barik@infosys.com</Link></div>
+                                        <div className="small text-black-50"><Link to="/home">mail.wanderluxe.com</Link></div>
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +139,7 @@ class Home extends Component {
                                     <div className="card-body text-center">
                                         <h4 className="text-uppercase m-0">Phone</h4>
                                         <hr className="my-4" />
-                                        <div className="small text-black-50">+91 7278422131</div>
+                                        <div className="small text-black-50">+91 8777583467</div>
                                     </div>
                                 </div>
                             </div>

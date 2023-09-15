@@ -107,7 +107,7 @@ class App extends Component {
           </div>
         </Router>
         <footer className="bg-black text-center text-white-50">
-          Copyright &copy; www.eta.wanderluxe.com {new Date().getFullYear()}
+          Copyright &copy; www.wanderluxe.com {new Date().getFullYear()}
     </footer>
       </div>
     );
