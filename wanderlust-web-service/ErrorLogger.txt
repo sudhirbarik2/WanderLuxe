@@ -1,0 +1,36 @@
+CastError: Cast to Number failed for value "NaN" at path "contactNo" for model "User"
+    at new CastError (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\error\cast.js:29:11)
+    at model.Query.exec (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4341:21)
+    at model.Query.Query.then (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4433:15)
+    at F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\src\model\userslogin.js:34:63
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+CastError: Cast to Number failed for value "NaN" at path "contactNo" for model "User"
+    at new CastError (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\error\cast.js:29:11)
+    at model.Query.exec (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4341:21)
+    at model.Query.Query.then (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4433:15)
+    at F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\src\model\userslogin.js:34:63
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+CastError: Cast to Number failed for value "NaN" at path "contactNo" for model "User"
+    at new CastError (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\error\cast.js:29:11)
+    at model.Query.exec (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4341:21)
+    at model.Query.Query.then (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4433:15)
+    at F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\src\model\userslogin.js:34:63
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+CastError: Cast to Number failed for value "NaN" at path "contactNo" for model "User"
+    at new CastError (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\error\cast.js:29:11)
+    at model.Query.exec (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4341:21)
+    at model.Query.Query.then (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4433:15)
+    at F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\src\model\userslogin.js:34:63
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+CastError: Cast to Number failed for value "NaN" at path "contactNo" for model "User"
+    at new CastError (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\error\cast.js:29:11)
+    at model.Query.exec (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4341:21)
+    at model.Query.Query.then (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4433:15)
+    at F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\src\model\userslogin.js:34:63
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+CastError: Cast to Number failed for value "NaN" at path "contactNo" for model "User"
+    at new CastError (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\error\cast.js:29:11)
+    at model.Query.exec (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4341:21)
+    at model.Query.Query.then (F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\node_modules\mongoose\lib\query.js:4433:15)
+    at F:\MERN Stack\FA4 Project\Code-ToTrainee\wanderlust-web-service\src\model\userslogin.js:34:63
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
