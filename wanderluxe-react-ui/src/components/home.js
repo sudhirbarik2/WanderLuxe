@@ -95,7 +95,7 @@ class Home extends Component {
                                     />
                                     <button
                                         type="submit"
-                                        className="btn btn-success mx-auto btnConfig"
+                                        className="btn bt-success mx-auto btnConfig"
                                         onClick={this.handleClick}
                                     >
                                         Subscribe

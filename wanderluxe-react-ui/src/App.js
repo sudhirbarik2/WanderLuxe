@@ -56,27 +56,27 @@ class App extends Component {
       <div>
         <Router>
           <div className="App">
-            <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-              <div className="navbar-header">
-                <Link className="navbar-brand" to="/">Start Wandering</Link>
+            <nav className="navbar navbar-expand-md sticky-top navbar transparent navbar-inverse">
+              <div className="navbar-header ">
+                <Link className="navbar-brand navstyle" to="/">Start Wandering</Link>
               </div>
               <ul className="navbar-nav ml-auto">
                 {this.state.logged_userId ? <li className="nav-item">
-                  <Link className="nav-link" to="">Welcome {this.state.logged_userName}</Link>
+                  <Link className="nav-link navstyle" to="">Welcome {this.state.logged_userName.split(' ')[0].charAt(0).toUpperCase() + this.state.logged_userName.split(' ')[0].slice(1).toLowerCase()}</Link>
                 </li> : null}
                 <li className="nav-item">
-                  <Link className="nav-link" to="/packages">Hot Deals </Link>
+                  <Link className="nav-link navstyle" to="/packages">Hot Deals </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/viewBookings">Planned Trips</Link>
+                  <Link className="nav-link navstyle" to="/viewBookings">Planned Trips</Link>
                 </li>
                 {!this.state.logged_userId ?
                   <li className="nav-item">
-                    <Link className="nav-link" to="/login"> Login</Link>
+                    <Link className="nav-link navstyle" to="/login"> Login</Link>
                   </li> : null}
                 {this.state.logged_userId ?
                   <li className="nav-item">
-                    <button className="nav-link btn btn-link" onClick={this.confirm_logout}>Logout</button>
+                    <button className="buttonTransparent nav-link  btn-link navstyle " onClick={this.confirm_logout}>Logout</button>
                   </li> : null}
               </ul>
             </nav>

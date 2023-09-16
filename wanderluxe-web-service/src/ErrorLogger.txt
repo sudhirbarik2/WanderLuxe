@@ -32444,3 +32444,27 @@ Error: Enter registered contact number! If not registered, please register
     at F:\MERN Stack\FA4 Project\Code-ToTrainee break\wanderluxe-web-service\src\service\userslogin.js:8:23
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLust/wanderlust-web-service/src/service/userslogin.js:8:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLust/wanderlust-web-service/src/service/userslogin.js:8:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLust/wanderlust-web-service/src/service/userslogin.js:8:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLust/wanderlust-web-service/src/service/userslogin.js:8:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLust/wanderlust-web-service/src/service/userslogin.js:8:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLust/wanderlust-web-service/src/service/userslogin.js:8:23
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)

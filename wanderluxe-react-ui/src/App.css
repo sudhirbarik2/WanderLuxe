@@ -17,6 +17,20 @@
 .btnConfig{
   height: 60px;
 }
+.navbar.transparent.navbar-inverse .navbar-inner {
+  background: rgba(0,0,0,0.4);
+}
+.navstyle{
+  color: white !important;
+}
+.navstyle:hover{
+  color:grey !important;
+}
+.buttonTransparent{
+  background: transparent;
+  border: none !important;
+  box-shadow: none !important;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
