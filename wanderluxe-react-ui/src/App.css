@@ -17,6 +17,21 @@
 .btnConfig{
   height: 60px;
 }
+.subBtn{
+  background-color: #297500 !important;
+}
+.subBtn:hover{
+  background: transparent !important;
+  border-color: #04AA6D;
+  color: white !important;
+}
+.sidebarStyle{
+  height: 90% !important;
+  position:fixed;
+  right:0;
+  bottom:0;
+  top: 10% !important;
+}
 .navbar.transparent.navbar-inverse .navbar-inner {
   background: rgba(0,0,0,0.4);
 }
@@ -28,8 +43,8 @@
 }
 .buttonTransparent{
   background: transparent;
-  border: none !important;
-  box-shadow: none !important;
+  border: none;
+  box-shadow: none;
 }
 .App-header {
   background-color: #282c34;

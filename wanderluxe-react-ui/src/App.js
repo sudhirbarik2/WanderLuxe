@@ -76,7 +76,7 @@ class App extends Component {
                   </li> : null}
                 {this.state.logged_userId ?
                   <li className="nav-item">
-                    <button className="buttonTransparent nav-link  btn-link navstyle " onClick={this.confirm_logout}>Logout</button>
+                    <button className="buttonTransparent nav-link btn-link navstyle " onClick={this.confirm_logout}>Logout</button>
                   </li> : null}
               </ul>
             </nav>

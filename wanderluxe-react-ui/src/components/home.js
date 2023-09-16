@@ -95,7 +95,7 @@ class Home extends Component {
                                     />
                                     <button
                                         type="submit"
-                                        className="btn bt-success mx-auto btnConfig"
+                                        className="btn subBtn bt-success mx-auto btnConfig"
                                         onClick={this.handleClick}
                                     >
                                         Subscribe
@@ -139,7 +139,7 @@ class Home extends Component {
                                     <div className="card-body text-center">
                                         <h4 className="text-uppercase m-0">Phone</h4>
                                         <hr className="my-4" />
-                                        <div className="small text-black-50">+91 8777583467</div>
+                                        <div className="small text-black-50">+91 1234123456</div>
                                     </div>
                                 </div>
                             </div>
