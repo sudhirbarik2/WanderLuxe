@@ -58,7 +58,7 @@ class App extends Component {
           <div className="App">
             <nav className="navbar navbar-expand-md sticky-top navbar transparent navbar-inverse">
               <div className="navbar-header ">
-                <Link className="navbar-brand navstyle" to="/">Start Wandering</Link>
+                <Link className="navbar-brand navstyleBrand" to="/"><img src="./assets/wanderluxe.png" width="60 px" height="40 px" alt="WanderLuxe Logo"></img>Start Wandering</Link>
               </div>
               <ul className="navbar-nav ml-auto">
                 {this.state.logged_userId ? <li className="nav-item">

@@ -38,6 +38,12 @@
 .navstyle{
   color: white !important;
 }
+.navstyleBrand{
+  color: #ff8400 !important;
+}
+.navstyleBrand:hover{
+  color:white !important;
+}
 .navstyle:hover{
   color:grey !important;
 }
