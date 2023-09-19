@@ -32468,3 +32468,39 @@ Error: Enter registered contact number! If not registered, please register
     at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLust/wanderlust-web-service/src/service/userslogin.js:8:23
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)

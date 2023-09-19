@@ -103,13 +103,13 @@ class HotDeals extends Component {
         this.getHotDeals();
     }
     render() {
-        if(this.state.spinnerStatus){return(<div className="text-center"><ProgressSpinner></ProgressSpinner></div>)}
-        if(!this.state.loginStatus){return(<div><h4 className="text-danger">You have not logged in, Please Login to continue</h4><Login></Login></div> ) }
-        else if(!this.state.dataStatus){return(<div><h4 className="text-danger">Sorry you do not have any planned trips yet, Enjoy exploring...</h4></div> )}
+        if(this.state.spinnerStatus){return(<div className="text-center bookingDesign"><ProgressSpinner></ProgressSpinner></div>)}
+        if(!this.state.loginStatus){return(<div><h4 className="text-danger bookingDesign">You have not logged in, Please Login to continue</h4><Login></Login></div> ) }
+        else if(!this.state.dataStatus){return(<div><h4 className="text-danger bookingDesign">Sorry you do not have any planned trips yet, Enjoy exploring...</h4></div> )}
         else
         {
         return (
-            <div>
+            <div className="bookingDesign">
                 
                 {/* <!-- hot deals normal list display --> */}
                 <div className="row destination card">  {/* *ngIf="!bookingPage" */}

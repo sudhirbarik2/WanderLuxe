@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
@@ -62,21 +62,21 @@ class App extends Component {
               </div>
               <ul className="navbar-nav ml-auto">
                 {this.state.logged_userId ? <li className="nav-item">
-                  <Link className="nav-link navstyle" to="">Welcome {this.state.logged_userName.split(' ')[0].charAt(0).toUpperCase() + this.state.logged_userName.split(' ')[0].slice(1).toLowerCase()}</Link>
+                  <p className="nav-link " to="">Welcome {this.state.logged_userName.split(' ')[0].charAt(0).toUpperCase() + this.state.logged_userName.split(' ')[0].slice(1).toLowerCase()}</p>
                 </li> : null}
                 <li className="nav-item">
-                  <Link className="nav-link navstyle" to="/packages">Hot Deals </Link>
+                  <Link className="nav-link navstyleBrand" to="/packages">Hot Deals </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link navstyle" to="/viewBookings">Planned Trips</Link>
+                  <Link className="nav-link navstyleBrand" to="/viewBookings">Planned Trips</Link>
                 </li>
                 {!this.state.logged_userId ?
                   <li className="nav-item">
-                    <Link className="nav-link navstyle" to="/login"> Login</Link>
+                    <Link className="nav-link navstyleBrand" to="/login"> Login</Link>
                   </li> : null}
                 {this.state.logged_userId ?
                   <li className="nav-item">
-                    <button className="buttonTransparent nav-link btn-link navstyle " onClick={this.confirm_logout}>Logout</button>
+                    <button className="buttonTransparent nav-link btn-link navstyleBrand " onClick={this.confirm_logout}>Logout</button>
                   </li> : null}
               </ul>
             </nav>
@@ -91,7 +91,7 @@ class App extends Component {
                 maximizable
               >
                 Are you sure you want to logout?
-            </Dialog>
+              </Dialog>
             </div>
             <Switch>
               <Route exact path="/" component={Home}></Route>
@@ -102,13 +102,13 @@ class App extends Component {
               <Route exact path="/packages/:continent" component={Packages}></Route>{/* Destinations with search*/}
               <Route exact path="/book/:userId/:destinationId" component={Bookings}></Route>
               <Route exact path="/viewBookings" component={Bookings}></Route>
-              {/* <Route path="*" render={() => <Redirect to="/login" />}></Route> */}
+              <Route path="*" render={() => <Redirect to="/" />}></Route>
             </Switch>
           </div>
         </Router>
         <footer className="bg-black text-center text-white-50">
           Copyright &copy; www.wanderluxe.com {new Date().getFullYear()}
-    </footer>
+        </footer>
       </div>
     );
   }

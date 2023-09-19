@@ -22,7 +22,7 @@
     "redux-logger": "^3.0.6"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node ./wanderluxe-web-service/src/app cd wanderluxe-react-ui react-scripts start",
     "build": "react-scripts build",
     "test": "jest --coverage --coverageDirectory=output/coverage/jest",
     "eject": "react-scripts eject"
