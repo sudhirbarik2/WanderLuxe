@@ -1,0 +1,13 @@
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+CastError: Cast to Number failed for value "NaN" (type number) at path "contactNo" for model "User"
+    at model.Query.exec (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4498:21)
+    at Query.then (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4592:15)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:34:63
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+CastError: Cast to Number failed for value "NaN" (type number) at path "contactNo" for model "User"
+    at model.Query.exec (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4498:21)
+    at Query.then (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4592:15)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:34:63
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
