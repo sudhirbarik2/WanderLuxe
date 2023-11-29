@@ -25,7 +25,7 @@ class App extends Component {
       longitude: null,
       country:null,
       city:null,
-      region:'',
+      region:null,
       
     }
     
@@ -33,10 +33,11 @@ class App extends Component {
   componentDidMount() {
     let cityy,statee;
     Axios.get('https://ipapi.co/json').then((loc)=>{
-              console.log(loc.data);
+              console.log(loc.data.region);
               cityy=loc.data.city;
               statee=loc.data.region;
-              this.setState({city:loc.data.city,state:loc.data.region,country:loc.data.country_name})
+              this.setState({city:loc.data.city,country:loc.data.country_name})
+              this.setState({state:loc.data.region})
 
             }).then(()=>{
               // console.log(this.city,this.state);
@@ -143,13 +144,13 @@ class App extends Component {
 
     return (
       <div>
-        {console.log("City",this.state.country)}
+        {console.log("Country",this.state.country,",",this.state.region,",",this.state.city)}
         <Router>
           <div className="App">
             <nav className="navbar navbar-expand-md sticky-top navbar transparent navbar-inverse">
               <div className="navbar-header ">
-                <Link className="navbar-brand navstyleBrand" to="/"><img src="./assets/wanderluxe.png" width="60 px" height="40 px" alt="WanderLuxe Logo"></img>Start Wandering</Link>
-                {this.state.city?<span className=" navstyleBrand"><img src="./assets/pin.png" width="17 px" height="20 px" alt="location Logo"/> {this.state.city}</span>:'No Location'}
+                <Link className="navbar-brand navstyleBrand" to="/"><img src="./assets/wanderluxe.png" width="60 px" height="40 px" alt="WanderLuxe Logo"></img></Link>
+                {this.state.city?<span className=" navstyleBrand"><img src="./assets/pin.png" width="17 px" height="20 px" alt="location Logo"/> {this.state.city}, {this.state.country}</span>:'No Location'}
               </div>
               <ul className="navbar-nav ml-auto">
                 {this.state.logged_userId ? <li className="nav-item">
