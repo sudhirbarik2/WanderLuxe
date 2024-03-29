@@ -3,6 +3,7 @@ const router = express.Router();
 const setupUser = require("../model/setupUser")
 const userservice = require('../service/userslogin')
 const User = require('../model/beanClasses/users')
+const HotDeal=require('../model/beanClasses/hotDeal')
 router.get("/setup", (req, res, next) => {
     setupUser.userSetup().then((data) => {
         res.send(data)
@@ -32,6 +33,36 @@ router.get('/destinations/:continent', function (req, res, next) {
         res.status=200;
     }).catch(err => next(err));
 })
-
+//add new Hotdeal
+router.post('/hotDeals',function(req,res,next){
+    hotdeal=new HotDeal(req.body);
+    userservice.pushHotDeals(hotdeal).then(function(deal){
+        res.json(deal);
+        res.status=200;
+    }).catch(err=>next(err))
+})
+//add new Package
+router.post('/package',function(req,res,next){
+    hotdeal=new HotDeal(req.body);
+    userservice.pushPackages(hotdeal).then(function(deal){
+        res.json(deal);
+        res.status=200;
+    }).catch(err=>next(err))
+})
+router.delete('/hotDeals/:hdid',function(req,res,next){
+    let hotdeal=req.params.hdid;
+    userservice.deleteHotDeals(hotdeal).then(function(deal){
+        res.json(deal);
+        res.status=200;
+    }).catch(err=>next(err))
+})
+//add new Package
+router.delete('/package/:pkgid',function(req,res,next){
+    let pkg=req.params.pkgid;
+    userservice.deletePackages(pkg).then(function(deal){
+        res.json(deal);
+        res.status=200;
+    }).catch(err=>next(err))
+})
 module.exports = router;
 

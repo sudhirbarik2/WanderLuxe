@@ -3,7 +3,8 @@ import { Link, Redirect } from 'react-router-dom';
 import HotDeals from './hotdeals'
 import Axios from 'axios';
 //import {backendUrlUser,backendUrlPackage,backendUrlBooking} from '../BackendURL';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 class Home extends Component {
 
     state = {
@@ -34,7 +35,11 @@ class Home extends Component {
         //     this.setState({ successMessage: "Please Enter a mail" });
         // }
         // else {
-        this.setState({ successMessage: "Thank you for subscribing. Updates will be sent to the subscribing Email ID" });
+        toast("Thank you for subscribing. Updates will be sent to the subscribing Email ID",{
+            position: 'top-center'
+        })
+        // this.setState({ successMessage: "Thank you for subscribing. Updates will be sent to the subscribing Email ID" });
+        // alert("Thank you for subscribing. Updates will be sent to the subscribing Email ID")
         // }
     }
 
@@ -51,6 +56,11 @@ class Home extends Component {
     }
     componentDidMount() {
         let cityy, statee;
+        // if (sessionStorage.getItem('userName') != null) {
+        //     toast("Welcome "+sessionStorage.getItem('userName'),{
+        //         position: 'top-center',
+        //     })
+        // }
         Axios.get('https://ipapi.co/json').then((loc) => {
             console.log(loc.data);
             cityy = loc.data.city;
@@ -132,15 +142,17 @@ class Home extends Component {
                                         type="submit"
                                         className="btn btn-outline-warning btnConfig mx-auto"
                                         onClick={this.handleClick}
+                                        disabled={!this.state.emailId}
                                     >
                                         Subscribe
                                     </button>
+                                    <ToastContainer />
                                 </form>
                             </div>
                         </div>
                         <br />
                         {this.state.successMessage ?
-                            <span className="text-danger text-center">{this.state.successMessage}</span> :
+                            <span className="text-success text-center">{this.state.successMessage}</span> :
                             null}
                     </div>
                 </section>

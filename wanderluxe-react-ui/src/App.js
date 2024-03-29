@@ -46,45 +46,7 @@ class App extends Component {
               console.log(err);
               // console.log(this.state.city,this.state.region);
             })
-    // if (navigator.geolocation) {
-    //   navigator.permissions
-    //     .query({ name: "geolocation" })
-    //     .then(function (result) {
-    //       if (result.state === "granted") {
-    //         console.log(result.state);
-    //         //If granted then you can directly call your function here
-    //         // navigator.geolocation.getCurrentPosition(function(position) {
-    //         //   console.log("Latitude is :", position.coords.latitude);
-    //         //   console.log("Longitude is :", position.coords.longitude);
-    //         // });
-            
-    //         Axios.get('https://ipapi.co/json').then((loc)=>{
-    //           console.log(loc.data);
-    //           cityy=loc.data.city;
-    //           statee=loc.data.region;
-    //         }).then(()=>{
-    //           // console.log(this.city,this.state);
-              
-    //         }).catch((err)=>{
-    //           console.log(err);
-    //           // console.log(this.state.city,this.state.region);
-    //         })
-            
-    //       } else if (result.state === "prompt") {
-    //         console.log(result.state);
-    //       } else if (result.state === "denied") {
-    //         //If denied then you have to show instructions to enable location
-    //         alert("Please grant permissio for location")
-    //       }
-    //       result.onchange = function () {
-    //         console.log(result.state);
-    //       };
-    //     });
-    // } else {
-    //   alert("Sorry Not available!");
-    // }
-    // console.log("'cityyy",cityy);
-    
+
   }
   getLocation=async()=>{
     const loc= await Axios.get('https://ipapi.co/json');

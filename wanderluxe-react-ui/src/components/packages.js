@@ -9,7 +9,8 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-ro
 
 //import {backendUrlUser,backendUrlPackage,backendUrlBooking} from '../BackendURL';
 //import Book from './book';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { backendUrlUser, backendUrlPackage, backendUrlBooking } from '../BackendURL';
 
 
@@ -18,6 +19,7 @@ class Packages extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            donBooking: false,
             bookingForm: {
                 noOfPersons: 0,
                 date: "",
@@ -85,6 +87,7 @@ class Packages extends Component {
     handleChange = (event) => {
         const target = event.target;
         const name = target.name;
+        this.setState({donBooking:false})
         if (target.checked) {
             var value = target.checked;
         } else {
@@ -182,18 +185,31 @@ class Packages extends Component {
     loadBookingPage = (dealId) => {
         //console.log(dealId)
         //console.log(":here");
-        this.setState({ visibleRight: false });
+        // this.setState({ visibleRight: false });
+        toast.success("Booking successfull",{
+            position: 'top-center'
+        })
         sessionStorage.setItem('noOfPersons', this.state.bookingForm.noOfPersons);
         sessionStorage.setItem('checkInDate', this.state.bookingForm.date);
         sessionStorage.setItem('flight', this.state.bookingForm.flights);
         sessionStorage.setItem('dealId', dealId);
-        this.setState({ show: true, bookingPage: true, showItinerary: false, dealId: dealId })
+        this.setState({ show: true, bookingPage: true, showItinerary: false, dealId: dealId, donBooking: true })
         if (sessionStorage.getItem("userId")) {
             this.sumitBooking()
-            this.setState({ goBooking: true }, () => {
-                window.location.reload();
-            })
+            this.setState({ goBooking: true })
             //window.location.reload();
+            const { bookingForm } = this.state;
+            this.setState({
+                bookingForm: { ...bookingForm, noOfPersons: 0,
+                    date: "",
+                    flights: false }
+            });
+            const { bookingFormValid } = this.state;
+            this.setState({
+                bookingFormValid: { ...bookingFormValid, noOfPersons: false,
+                    date: false,
+                    buttonActive: false}
+            });
 
         }
         else {
@@ -225,7 +241,7 @@ class Packages extends Component {
                             </div>
                             <div className="col-md-3">
                                 <h4>Prices Starting From:</h4>
-                                <div className="text-center text-success"><h6>{mypackage.chargesPerPerson}</h6></div><br /><br />
+                                <div className="text-center text-success"><h6>₹{mypackage.chargesPerPerson}</h6></div><br /><br />
                                 <div><button className="btn btn-primary book" onClick={() => this.getitinerary(mypackage)}>View Details</button></div><br />
                                 <div><button className="btn btn-primary book" onClick={() => this.openBooking(mypackage)}>Book </button>  </div>
                             </div>
@@ -301,7 +317,7 @@ class Packages extends Component {
 
     render() {
         if (this.state.spinnerStatus) { return (<div className="text-center"><ProgressSpinner></ProgressSpinner></div>) }
-        if (this.state.goBooking === true) return <Redirect to={'/viewBookings'} />
+        // if (this.state.goBooking === true) return <Redirect to={'/viewBookings'} />
         return (
             <div style={{minHeight:"75vh"}}>
 
@@ -404,20 +420,24 @@ class Packages extends Component {
                                 (
                                     <h4 className="text-success">
                                         Your trip ends on {this.state.checkOutDate} and
-                                        you will pay ${this.state.totalCharges}
+                                        you will pay ₹{this.state.totalCharges}
                                     </h4>
                                 )
                             }
 
                             <div className="text-center">
                                 <button disabled={!this.state.bookingFormValid.buttonActive} className="btn btn-success" onClick={() => this.loadBookingPage(this.state.deal.destinationId)}>Book</button>
+                                
                                 &nbsp; &nbsp; &nbsp;
-                                <button type="button" className="btn btn-link" onClick={(e) => this.setState({ showItinerary: false })}>Cancel</button>
+                                <button type="button" className="btn btn-link" onClick={(e) => this.setState({ showItinerary: false, donBooking:false })}>Cancel</button>
+                            </div>
+                            <div>
+                                {this.state.donBooking ? <span className='text-success'>Booking successsfull</span> : ""}
                             </div>
                         </TabPanel>
                     </TabView>
                 </Sidebar>
-
+                <ToastContainer />
             </div >
         )
     }

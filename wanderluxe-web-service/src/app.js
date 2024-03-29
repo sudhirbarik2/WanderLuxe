@@ -7,7 +7,7 @@ const userRouter = require('./routes/userRouter');
 const packageRouter=require('./routes/packageRouter');
 const bookRouter=require('./routes/bookRouter');
 const cors = require('cors');
-
+const sendMail=require('./routes/sendMail')
 const app = express();
 app.use(cors());
 
@@ -16,7 +16,9 @@ app.use(myRequestLogger);
 app.use('/user', userRouter);
 app.use('/package', packageRouter);
 app.use('/book', bookRouter);
+app.use('/',sendMail);
 app.use(myErrorLogger);
+
 
 
 app.listen(4000);

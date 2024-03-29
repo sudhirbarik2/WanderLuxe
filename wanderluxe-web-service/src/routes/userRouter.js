@@ -31,7 +31,14 @@ router.post('/register', function (req, res, next) {
         res.status=200;
     }).catch(err => next(err));
 })
-
+//Router to register as Admin
+router.post('/registerAdmin', function (req, res, next) {    
+    const user=new User(req.body)
+    userservice.registerAdmin(user).then(function (userDetails) {
+        res.json(userDetails);
+        res.status=200;
+    }).catch(err => next(err));
+})
 //router to get the booking details
 router.get('/getBookings/:userId', function (req, res, next) {    
     let userId=req.params.userId;   

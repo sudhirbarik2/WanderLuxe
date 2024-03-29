@@ -11,3 +11,194 @@ CastError: Cast to Number failed for value "NaN" (type number) at path "contactN
     at Query.then (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4592:15)
     at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:34:63
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+CastError: Cast to Number failed for value "NaN" (type number) at path "contactNo" for model "User"
+    at model.Query.exec (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4498:21)
+    at Query.then (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4592:15)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:34:63
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+CastError: Cast to Number failed for value "NaN" (type number) at path "availability"
+    at model.Query.exec (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4498:21)
+    at Query.then (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4592:15)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:178:139
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+TypeError: Cannot set properties of undefined (setting 'about')
+    at new HotDeal (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/beanClasses/hotDeal.js:7:27)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:37:13
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+TypeError: Cannot read properties of undefined (reading 'then')
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:38:38
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)
+TypeError: Cannot read properties of undefined (reading 'then')
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:38:38
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)
+TypeError: Cannot read properties of undefined (reading 'then')
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:38:38
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)
+TypeError: Cannot read properties of undefined (reading 'then')
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:38:38
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)
+TypeError: Cannot read properties of undefined (reading 'then')
+    at userService.pushHotDeals (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:149:43)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:38:17
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+ReferenceError: userDb is not defined
+    at usersDB.pushHotDeal (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:102:17)
+    at userService.pushHotDeals (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:149:19)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:38:17
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+ReferenceError: userDB is not defined
+    at usersDB.pushHotDeal (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:102:17)
+    at userService.pushHotDeals (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:149:19)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:38:17
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)

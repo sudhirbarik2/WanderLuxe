@@ -54,7 +54,7 @@ let hotDealsSchema =Schema({
 let collection = {};
 
 collection.getUserCollection = () => {
-    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+    return Mongoose.connect(url, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true }).then((database) => {
         return database.model('User', userSchema)
     }).catch((error) => {
         let err = new Error("Could not connect to Database");
@@ -64,7 +64,7 @@ collection.getUserCollection = () => {
 }
 collection.getBookingCollection = () =>{
     //console.log("chk");
-    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+    return Mongoose.connect(url, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true }).then((database) => {
         return database.model('Booking', bookingSchema)
     }).catch((error) => {
         let err = new Error("Could not connect to Database");
@@ -73,7 +73,7 @@ collection.getBookingCollection = () =>{
     })
 }
 collection.getPackageCollection= () =>{
-    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+    return Mongoose.connect(url, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true }).then((database) => {
         return database.model('Package', packageSchema)
     }).catch((error) => {
         let err = new Error("Could not connect to Database");
@@ -82,7 +82,7 @@ collection.getPackageCollection= () =>{
     })
 }
 collection.getHotDealsCollection= () =>{
-    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+    return Mongoose.connect(url, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true }).then((database) => {
         return database.model('HotDeals', hotDealsSchema)
     }).catch((error) => {
         let err = new Error("Could not connect to Database");

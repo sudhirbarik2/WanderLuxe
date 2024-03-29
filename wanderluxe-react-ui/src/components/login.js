@@ -3,7 +3,8 @@ import axios from "axios";
 import { Redirect } from 'react-router-dom';
 import {backendUrlUser} from '../BackendURL';
 import { useAuth0 } from "@auth0/auth0-react";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { InputText } from 'primereact/inputtext';
 // import { Button } from 'primereact/button';
 //import Register from "./register"
@@ -26,6 +27,7 @@ class Login extends Component {
                 password: false,
                 buttonActive: false
             },
+            userName:"",
             successMessage: "",
             errorMessage: "",
             loadHome: false,
@@ -58,7 +60,7 @@ class Login extends Component {
                 sessionStorage.setItem("contactNo", response.data.contactNo);
                 sessionStorage.setItem("userId", userId);
                 sessionStorage.setItem("userName", response.data.name);
-                this.setState({ loadHome: true, userId: userId },()=>{
+                this.setState({ loadHome: true, userId: userId, userName:response.data.name },()=>{
                     window.location.reload();
                 })
 
@@ -73,6 +75,12 @@ class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.login();
+    }
+    toasting=()=>{
+        console.log("testing");
+        toast("welcome"+this.state.userName,{
+            position: 'top-center'
+        })
     }
 
     validateField = (fieldName, value) => {
@@ -161,16 +169,18 @@ class Login extends Component {
                                         <button
                                             type="submit"
                                             disabled={!this.state.loginformValid.buttonActive}
+                                            onClick={this.toasting}
                                             className="btn btn-primary form-control">
                                             Login
                                         </button>
+                                        <ToastContainer />
                                     </div>
                                     <br/>
                                     <div>
                                      <button className="btn btn-primary form-control" onClick={this.handleClick} >Click here to Register</button>
                                     </div>
                                     <div>
-                                    <button onClick={() => useAuth0()}>Log In</button>
+                                    {/* <button onClick={() => useAuth0()}>Log In</button> */}
                                     </div>
                                 </form>
                                 <br />
