@@ -12,7 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // Import toastify css file
 // import "react-toastify/dist/ReactToastify.css";
-
+import Navbar from './navbar';
 
 
 class Packages extends Component {
@@ -75,7 +75,7 @@ class Packages extends Component {
     handleChange = (event) => {
         const target = event.target;
         const name = target.name;
-        this.setState({donBooking:false})
+        this.setState({ donBooking: false })
         if (target.checked) {
             var value = target.checked;
         } else {
@@ -172,7 +172,7 @@ class Packages extends Component {
     }
     loadBookingPage = (dealId) => {
         // this.setState({ visibleRight: false });
-        toast.success("Booking successfull",{
+        toast.success("Booking successfull", {
             position: 'top-center'
         })
         sessionStorage.setItem('noOfPersons', this.state.bookingForm.noOfPersons);
@@ -187,15 +187,19 @@ class Packages extends Component {
             // window.location.reload();
             const { bookingForm } = this.state;
             this.setState({
-                bookingForm: { ...bookingForm, noOfPersons: 0,
+                bookingForm: {
+                    ...bookingForm, noOfPersons: 0,
                     date: "",
-                    flights: false }
+                    flights: false
+                }
             });
             const { bookingFormValid } = this.state;
             this.setState({
-                bookingFormValid: { ...bookingFormValid, noOfPersons: false,
+                bookingFormValid: {
+                    ...bookingFormValid, noOfPersons: false,
                     date: false,
-                    buttonActive: false}
+                    buttonActive: false
+                }
             });
 
         }
@@ -315,11 +319,11 @@ class Packages extends Component {
         // if (this.state.goBooking === true) return <Redirect to={{ pathname: '/home', state: { source: 'booked' } }} />
         return (
             <div>
-
+                <Navbar />
                 {
                     !this.state.packagePage ?
                         (
-                            <div>
+                            <div className='hotDealsMain'>
                                 {this.displayPackages()}
                                 {
                                     this.state.errorMessage ?
@@ -416,7 +420,7 @@ class Packages extends Component {
                             <div className="text-center">
                                 <button disabled={!this.state.bookingFormValid.buttonActive} className="btn btn-success" onClick={() => this.loadBookingPage(this.state.deal.destinationId)}>Book</button>
                                 &nbsp; &nbsp; &nbsp;
-                                <button type="button" className="btn btn-link" onClick={(e) => this.setState({ showItinerary: false, donBooking:false })}>Cancel</button>
+                                <button type="button" className="btn btn-link" onClick={(e) => this.setState({ showItinerary: false, donBooking: false })}>Cancel</button>
                             </div>
                             {/* <div>
                                 {this.state.donBooking ? <span className='text-success'>Booking successsfull</span> : ""}

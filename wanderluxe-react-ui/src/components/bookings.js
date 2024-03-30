@@ -5,6 +5,7 @@ import { ProgressSpinner } from 'primereact/progressspinner';
 import { useNavigate } from "react-router-dom";
 import { Packages } from "./hotdeals";
 import Login from './login'
+import Navbar from './navbar';
 class HotDeals extends Component {
     constructor(props) {
         super(props);
@@ -20,7 +21,7 @@ class HotDeals extends Component {
             spinnerStatus: false,
             today: new Date(),
             hasReloaded: false,
-            remainingDate:0
+            remainingDate: 0
         }
     }
 
@@ -130,13 +131,16 @@ class HotDeals extends Component {
         else {
             // his.props.location.state.source=='booked'?this.softRefreshPage():""
             return (
-                <div className="bookingDesign">
+                <>
+                    <Navbar />
+                    <div className="bookingDesign">
 
-                    {/* <!-- hot deals normal list display --> */}
-                    <div className="row destination card">  {/* *ngIf="!bookingPage" */}
-                        {this.displayBookings()}
+                        {/* <!-- hot deals normal list display --> */}
+                        <div className="row destination card">  {/* *ngIf="!bookingPage" */}
+                            {this.displayBookings()}
+                        </div >
                     </div >
-                </div >
+                </>
             )
         }
     }

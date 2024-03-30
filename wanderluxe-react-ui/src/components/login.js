@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from 'react-router-dom';
-import {backendUrlUser} from '../BackendURL';
+import { backendUrlUser } from '../BackendURL';
 import { useAuth0 } from "@auth0/auth0-react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // import { Button } from 'primereact/button';
 //import Register from "./register"
 //import UserObj from '../actions/UserAction';
-
+import Navbar from './navbar';
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -27,13 +27,13 @@ class Login extends Component {
                 password: false,
                 buttonActive: false
             },
-            userName:"",
+            userName: "",
             successMessage: "",
             errorMessage: "",
             loadHome: false,
             loadRegister: false,
             userId: "",
-            loginError:""
+            loginError: ""
         }
     }
     handleClick = () => {
@@ -54,20 +54,20 @@ class Login extends Component {
     login = () => {
 
         const { loginform } = this.state;
-        axios.post(backendUrlUser+'/login', loginform)
+        axios.post(backendUrlUser + '/login', loginform)
             .then(response => {
                 let userId = response.data.userId;
                 sessionStorage.setItem("contactNo", response.data.contactNo);
                 sessionStorage.setItem("userId", userId);
                 sessionStorage.setItem("userName", response.data.name);
-                this.setState({ loadHome: true, userId: userId, userName:response.data.name },()=>{
+                this.setState({ loadHome: true, userId: userId, userName: response.data.name }, () => {
                     window.location.reload();
                 })
 
                 //let action = UserObj.setForm(response.data.name,this.state.loadHome);
                 //this.props.dispatch(action);
             }).catch(error => {
-                this.setState({errorMessage : error.message , loginError:"Contact number or password incorrect !"});
+                this.setState({ errorMessage: error.message, loginError: "Contact number or password incorrect !" });
                 sessionStorage.clear();
             })
     }
@@ -76,11 +76,11 @@ class Login extends Component {
         event.preventDefault();
         this.login();
     }
-    toasting=()=>{
+    toasting = () => {
         console.log("testing");
-        toast("welcome"+this.state.userName,{
-            position: 'top-center'
-        })
+        // toast("welcome"+this.state.userName,{
+        //     position: 'top-center'
+        // })
     }
 
     validateField = (fieldName, value) => {
@@ -104,9 +104,9 @@ class Login extends Component {
                 if (!value || value === "") {
                     fieldValidationErrors.password = "Password is manadatory";
                     formValid.password = false;
-                    } else if (!(value.match(/[A-Z]/) && value.match(/[a-z]/) && value.match(/[0-9]/) && value.match(/[_!@#$%^&*]/)) || (value.length<7 || value.length>20)) {
-                        fieldValidationErrors.password = "Please Enter a valid password"
-                        formValid.password = false;
+                } else if (!(value.match(/[A-Z]/) && value.match(/[a-z]/) && value.match(/[0-9]/) && value.match(/[_!@#$%^&*]/)) || (value.length < 7 || value.length > 20)) {
+                    fieldValidationErrors.password = "Please Enter a valid password"
+                    formValid.password = false;
                 } else {
                     fieldValidationErrors.password = "";
                     formValid.password = true;
@@ -126,10 +126,11 @@ class Login extends Component {
     render() {
         if (this.state.loadHome === true) return <Redirect to={'/home'} />
         //console.log('/home/' + this.state.userId);
-        
+
         if (this.state.loadRegister === true) return <Redirect to={'/register'} />
         return (
             <div>
+                <Navbar />
                 <section id="loginPage" className="loginSection">    {/* *ngIf="!registerPage"  */}
                     <div className="container-fluid">
                         <div className="row">
@@ -147,7 +148,7 @@ class Login extends Component {
                                             className="form-control"
                                         />
                                     </div>
-                                    {this.state.loginformErrorMessage.contactNo ? (<span className="text-danger">{this.state.loginformErrorMessage.contactNo}</span>): null}
+                                    {this.state.loginformErrorMessage.contactNo ? (<span className="text-danger">{this.state.loginformErrorMessage.contactNo}</span>) : null}
 
                                     <div className="form-group">
                                         <label htmlFor="uPass">Password<span className="text-danger">*</span></label>
@@ -160,11 +161,11 @@ class Login extends Component {
                                             className="form-control"
                                         />
                                     </div>
-                                    {this.state.loginformErrorMessage.password ? (<span className="text-danger">{this.state.loginformErrorMessage.password}</span>): null}<br />
+                                    {this.state.loginformErrorMessage.password ? (<span className="text-danger">{this.state.loginformErrorMessage.password}</span>) : null}<br />
                                     <span><span className="text-danger">*</span> marked feilds are mandatory</span>
                                     <br />
-                                    <span className="text-danger"><h6>{ this.state.loginError }</h6></span>
-                                        
+                                    <span className="text-danger"><h6>{this.state.loginError}</h6></span>
+
                                     <div>
                                         <button
                                             type="submit"
@@ -175,17 +176,17 @@ class Login extends Component {
                                         </button>
                                         <ToastContainer />
                                     </div>
-                                    <br/>
+                                    <br />
                                     <div>
-                                     <button className="btn btn-primary form-control" onClick={this.handleClick} >Click here to Register</button>
+                                        <button className="btn btn-primary form-control" onClick={this.handleClick} >Click here to Register</button>
                                     </div>
                                     <div>
-                                    {/* <button onClick={() => useAuth0()}>Log In</button> */}
+                                        {/* <button onClick={() => useAuth0()}>Log In</button> */}
                                     </div>
                                 </form>
                                 <br />
                                 {/* <!--can be a button or a link based on need --> */}
-                                
+
                             </div>
                         </div>
                     </div>

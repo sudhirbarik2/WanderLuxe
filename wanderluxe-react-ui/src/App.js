@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 
-import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import Register from "./components/register";
 import Login from './components/login';
@@ -16,61 +15,40 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+
       logged_userId: sessionStorage.getItem('userId'),
       logged_userName: sessionStorage.getItem('userName'),
       dialog_visible: false,
       logged_out: false,
       latitude: null,
       longitude: null,
-      country:null,
-      city:null,
-      region:null,
-      
+      country: null,
+      city: null,
+      region: null,
+
     }
-    
+
   }
   componentDidMount() {
-    let cityy,statee;
-    Axios.get('https://ipapi.co/json').then((loc)=>{
-              console.log(loc.data.region);
-              cityy=loc.data.city;
-              statee=loc.data.region;
-              this.setState({city:loc.data.city,country:loc.data.country_name})
-              this.setState({state:loc.data.region})
+    let cityy, statee;
+    Axios.get('https://ipapi.co/json').then((loc) => {
+      console.log(loc.data.region);
+      cityy = loc.data.city;
+      statee = loc.data.region;
+      this.setState({ city: loc.data.city, country: loc.data.country_name })
+      this.setState({ state: loc.data.region })
 
-            }).then(()=>{
-              // console.log(this.city,this.state);
-              
-            }).catch((err)=>{
-              console.log(err);
-              // console.log(this.state.city,this.state.region);
-            })
+    }).then(() => {
+      // console.log(this.city,this.state);
 
-  }
-  getLocation=async()=>{
-    const loc= await Axios.get('https://ipapi.co/json');
-    this.setState({location:loc})
-    console.log(loc);
-  }
-  getCoordinates=()=> {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-    });
-  }
-  position = async () => {
-    await navigator.geolocation.getCurrentPosition(
-      position => this.setState({ 
-        latitude: position.coords.latitude, 
-        longitude: position.coords.longitude
-      }), 
-      err => console.log(err)
-    );
-    console.log(this.state.latitude)
+    }).catch((err) => {
+      console.log(err);
+      // console.log(this.state.city,this.state.region);
+    })
+
   }
 
-  
+
   onClick = (event) => {
     this.setState({ dialog_visible: true })
   }
@@ -102,10 +80,9 @@ class App extends Component {
 
     return (
       <div>
-        {console.log("Country",this.state.country,",",this.state.region,",",this.state.city)}
         <Router>
           <div className="App">
-            <nav className="navbar navbar-expand-md sticky-top navbar transparent navbar-inverse">
+            {/* <nav className="navbar navbar-expand-md sticky-top navbar transparent navbar-inverse">
               <div className="navbar-header ">
                 <Link className="navbar-brand navstyleBrand" to="/"><img src="./assets/wanderluxe.png" width="60 px" height="40 px" alt="WanderLuxe Logo"></img></Link>
                 {this.state.city?<span className=" navstyleBrand"><img src="./assets/pin.png" width="17 px" height="20 px" alt="location Logo"/> {this.state.city}, {this.state.country}</span>:'No Location'}
@@ -142,7 +119,7 @@ class App extends Component {
               >
                 Are you sure you want to logout?
               </Dialog>
-            </div>
+            </div> */}
             <Switch>
               <Route exact path="/" component={Home}></Route>
               <Route exact path="/login" component={Login}></Route>

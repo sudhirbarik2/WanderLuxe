@@ -202,3 +202,9 @@ ReferenceError: userDB is not defined
     at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
     at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
     at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
