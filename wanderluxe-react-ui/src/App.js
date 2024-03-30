@@ -69,11 +69,7 @@ class App extends Component {
     );
     console.log(this.state.latitude)
   }
-  //  success=(position) =>{
-  //   const latitude = position.coords.latitude;
-  //   const longitude = position.coords.longitude;
-  //   console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-  // }
+
   
   onClick = (event) => {
     this.setState({ dialog_visible: true })
