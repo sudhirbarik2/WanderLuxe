@@ -178,6 +178,7 @@ userService.pushHotDeals = (hotDealData) => {
     })
 }
 userService.pushPackages = (pkg) => {
+    // console.log(pkg);
     return userDB.generatePackageId().then((hd) => {
         pkg.destinationId=hd;
         return userDB.pushDestination(pkg).then((p) => {

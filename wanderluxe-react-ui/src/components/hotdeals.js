@@ -172,15 +172,16 @@ class Packages extends Component {
     }
     loadBookingPage = (dealId) => {
         // this.setState({ visibleRight: false });
-        toast.success("Booking successfull", {
-            position: 'top-center'
-        })
+        
         sessionStorage.setItem('noOfPersons', this.state.bookingForm.noOfPersons);
         sessionStorage.setItem('checkInDate', this.state.bookingForm.date);
         sessionStorage.setItem('flight', this.state.bookingForm.flights);
         sessionStorage.setItem('dealId', dealId);
         this.setState({ show: true, bookingPage: true, showItinerary: false, dealId: dealId, donBooking: true })
         if (sessionStorage.getItem("userId")) {
+            toast.success("Booking successfull", {
+                position: 'top-center'
+            })
             this.sumitBooking()
             this.setState({ goBooking: true })
             // this.setState({ showItinerary: false })

@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.bg
+{
+    text-align: left;
+    
+    /* height: 80px; */
+    /* background: grey */
+    /* color: #fff;
+    font-weight: bold;
+    line-height: 80px; */
+}

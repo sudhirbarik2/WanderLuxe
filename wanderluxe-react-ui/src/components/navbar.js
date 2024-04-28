@@ -27,6 +27,12 @@ export class Navbar extends Component {
         }
 
     }
+    componentWillUnmount() {
+        // fix Warning: Can't perform a React state update on an unmounted component
+        this.setState = (state,callback)=>{
+            return;
+        };
+    }
     nClick = (event) => {
         this.setState({ dialog_visible: true })
     }
@@ -62,14 +68,13 @@ export class Navbar extends Component {
     render() {
         const footer = (
             <div>
-              <Button label="CONTINUE EXPLORING" icon="pi pi-check" onClick={this.onHide} />
-              <Button label="Logout" icon="pi pi-times" onClick={this.logout} className="p-button-secondary" />
+                <Button label="CONTINUE EXPLORING" icon="pi pi-check" onClick={this.onHide} />
+                <Button label="Logout" icon="pi pi-times" onClick={this.logout} className="p-button-secondary" />
             </div>
-          );
-      
+        );
+
         return (
             <div>
-
                 <nav className="navbar navbar-expand-md fixed-top transparent navbar-inverse rounded-bottom">
                     <div className="container ">
                         <div className="navbar-header ">
@@ -95,17 +100,23 @@ export class Navbar extends Component {
                                 {/* <li className="nav-item">
                                     <a className="nav-link navstyleBrand" href="/login">Login</a>
                                 </li> */}
-                                {!this.state.logged_userId ?
+                                {/* {!this.state.logged_userId ?
                                     <li className="nav-item">
                                         <Link className="nav-link navstyleBrand" to="/login"> Login</Link>
                                     </li> : null}
                                 {this.state.logged_userId ?
                                     <li className="nav-item">
                                         <button className="buttonTransparent nav-link btn-link navstyleBrand " onClick={this.confirm_logout}>Logout</button>
-                                    </li> : null}
-
+                                    </li> : null} */}
+                                    {!this.state.logged_userId?
+                                    <li className="nav-item">
+                                        <a className="nav-link navstyleBrand" href="/login">Login</a>
+                                    </li>:
+                                    <li className='"nav-item'>
+                                        <a className="nav-link navstyleBrand" onClick={this.confirm_logout}>Logout</a>
+                                    </li>    
+                                }
                             </ul>
-
                         </div>
                     </div>
                 </nav>

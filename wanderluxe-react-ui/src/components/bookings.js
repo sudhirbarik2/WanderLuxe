@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { Packages } from "./hotdeals";
 import Login from './login'
 import Navbar from './navbar';
+
 class HotDeals extends Component {
     constructor(props) {
         super(props);
@@ -58,6 +59,9 @@ class HotDeals extends Component {
                     window.location.reload();
                     alert(this.state.deleteMessage)
                 })
+                // toast.success("Booking successfull", {
+                //     position: 'top-center'
+                // })
             }).catch(error => {
                 console.log("No");
 
