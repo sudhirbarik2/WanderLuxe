@@ -9,8 +9,11 @@ const bookRouter=require('./routes/bookRouter');
 const cors = require('cors');
 const sendMail=require('./routes/sendMail')
 const app = express();
-app.use(cors());
+const multer=require('multer')
+const path=require('path')
 
+app.use(cors());
+app.use(express.static('public '))
 app.use(bodyParser.json());
 app.use(myRequestLogger);
 app.use('/user', userRouter);
@@ -19,6 +22,9 @@ app.use('/book', bookRouter);
 app.use('/',sendMail);
 app.use(myErrorLogger);
 
+// app.post('/upload',(req,res)=>{
+//     console.log(req.file);
+// })
 
 
 app.listen(4000);

@@ -744,3 +744,261 @@ TypeError: Cannot set properties of undefined (setting 'about')
     at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
     at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
     at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+ValidationError: Package validation failed: imageUrl: Cast to string failed for value "{}" (type Object) at path "imageUrl"
+    at Document.invalidate (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/document.js:2786:32)
+    at model.$set (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/document.js:1353:12)
+    at model.$set (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/document.js:1062:16)
+    at model.Document (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/document.js:148:12)
+    at model.Model (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/model.js:106:12)
+    at new model (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/model.js:4919:15)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/model.js:3165:22
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/model.js:3201:7
+    at Array.forEach (<anonymous>)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/model.js:3200:15
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/index.js:1149:10)
+    at Function.create (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/model.js:3135:23)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:153:27
+ReferenceError: eq is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:17
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)
+ReferenceError: hotDeal is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:67:5
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:14
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:14
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:14
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:14
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:14
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:14
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:15
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:15
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:15
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:15
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:15
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:15
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Assignment to constant variable.
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:63:15
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at done (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:49:68)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/lib/make-middleware.js:155:11
+    at WriteStream.<anonymous> (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/multer/storage/disk.js:43:9)
+    at WriteStream.emit (node:events:527:35)
+    at finish (node:internal/streams/writable:944:10)
+    at node:internal/streams/writable:925:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+ReferenceError: hotDeal is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:71:5
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)
+ReferenceError: hotDeal is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:71:5
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)
+ReferenceError: hotDeal is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/packageRouter.js:72:5
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)

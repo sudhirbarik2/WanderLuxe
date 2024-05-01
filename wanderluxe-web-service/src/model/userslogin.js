@@ -151,7 +151,7 @@ usersDB.pushDestination=(data)=>{
     // console.log(data);
     return connection.getPackageCollection().then((collection) => {
         return collection.create(data).then((d) => {
-            console.log("d",d);
+            // console.log("d",d);
             if (d)
                 return d;
             else

@@ -22,6 +22,9 @@ function AddData() {
   const [chargesPerPerson, setchargesPerPerson] = useState(0.00)
   const [discount, setdiscount] = useState(0.00)
   const [availability, setavailability] = useState(0.00)
+  const [selectedFile, setSelectedFile] = useState();
+  const [selectedImage, setSelectedImage] = useState();
+
   // ===========================================================
   function itinerary(event) {
     let day = event.target.value;
@@ -92,52 +95,40 @@ function AddData() {
     if (id.includes('availability')) {
       setavailability(val)
     }
+
+    if (id.includes('formFile')) {
+      console.log("IMGG", event.target.files);
+      setSelectedImage(URL.createObjectURL(event.target.files[0]));
+      setSelectedFile(event.target.files[0])
+    }
   }
   //=============================================
   function submitData() {
-    // console.log(sightSeeing.slice(0,days));
-    // console.log(continent);
-    // console.log(about);
-    // console.log(packageInclusions.slice(0,noOfPkg));
-    // console.log(tourHighlights.slice(0,noOfHighlights));
-    // let obj = {}
-    // obj.ss = sightSeeing.slice(0, days);
-    // obj.pkinc = packageInclusions.slice(0, noOfPkg);
-    // obj.th = tourHighlights.slice(0, noOfHighlights);
-    // obj.continent = continent;
-    // obj.name = name;
-    // obj.imageUrl = "imgurl";
-    // obj.about = about;
-    // obj.tourPace = tourPace;
-    // obj.noOfNights = noOfNights;
-    // obj.flightCharges = flightCharges;
-    // obj.chargesPerPerson = chargesPerPerson;
-    // obj.discount = discount;
-    // obj.availability = availability;
-
+    const formData = new FormData()
+    formData.append('file', selectedFile)
     const obj = {
       continent: continent,
       name: name,
-      imageUrl: "imgurl",
+      imageUrl: formData,
       details: {
-          about: about,
-          itinerary: {
-              dayWiseDetails: {
-                  firstDay: sightSeeing[0],
-                  restDaysSightSeeing: sightSeeing.slice(1, days-1),
-                  lastDay: sightSeeing[days-1],
-              },
-              packageInclusions: packageInclusions,
-              tourHighlights: tourHighlights,
-              tourPace: tourPace
-          }
+        about: about,
+        itinerary: {
+          dayWiseDetails: {
+            firstDay: sightSeeing[0],
+            restDaysSightSeeing: sightSeeing.slice(1, days - 1),
+            lastDay: sightSeeing[days - 1],
+          },
+          packageInclusions: packageInclusions,
+          tourHighlights: tourHighlights,
+          tourPace: tourPace
+        }
       },
       noOfNights: noOfNights,
       flightCharges: flightCharges,
       chargesPerPerson: chargesPerPerson,
       discount: discount,
       availability: availability
-  };
+    };
 
     console.log(obj);
     axios.post('http://localhost:4000/package/package', obj)
@@ -146,6 +137,19 @@ function AddData() {
       })
       .catch(error => {
         console.log(error.message);
+      });
+    console.log("Image: ", selectedFile);
+  }
+  function uploadimage() {
+    const formData = new FormData();
+    formData.append('file', selectedFile)
+    axios.post('http://localhost:4000/package/upload', formData)
+      .then(response => {
+        console.log(response);
+        console.log("Image upload Success");
+      })
+      .catch(error => {
+        console.log('Image upload failed...', error.message);
       });
   }
   //=====================================================================
@@ -219,8 +223,12 @@ function AddData() {
           <div className='col-md-3'></div>
           <div className='col-md-6'>
             <label htmlFor="formFile" className="form-label">Upload tour image :</label>
-            <input className="form-control" type="file" id="formFile" />
+            <input className="form-control col-md-6" type="file" id="formFile" onChange={handleChange} /><br />
+            <button type="button" class="btn btn-primary col-md-2" onClick={uploadimage}>Upload</button>
           </div>
+          <br />
+          <img src={selectedImage} style={{ height: '150px', width: '250px', alignItems: 'center' }} />
+
         </div>
         <div className='row'>
           <div className='col-md-3'></div>
