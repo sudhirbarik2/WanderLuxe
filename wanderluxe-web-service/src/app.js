@@ -13,7 +13,7 @@ const multer=require('multer')
 const path=require('path')
 
 app.use(cors());
-app.use(express.static('public '))
+app.use(express.static('./public'))
 app.use(bodyParser.json());
 app.use(myRequestLogger);
 app.use('/user', userRouter);

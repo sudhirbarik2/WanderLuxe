@@ -1002,3 +1002,9 @@ ReferenceError: hotDeal is not defined
     at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:335:12)
     at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
     at requestLogger (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/utilities/RequestLogger.js:8:5)
+Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565375487.jpeg'
+Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565435272.jpeg'
+Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565449051.jpeg'
+Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565479916.jpeg'
+Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565484931.jpeg'
+Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565489941.jpeg'

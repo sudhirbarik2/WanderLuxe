@@ -48,7 +48,7 @@ router.post('/hotDeals', function (req, res, next) {
 //add new Package=================================================================
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'public/images')
+        cb(null, 'public/assets')
     }, filename: (req, file, cb) => {
         cb(null, 'pkg' + "_" + Date.now() + path.extname(file.originalname))
     }
@@ -68,11 +68,13 @@ router.post('/upload', upload.single('file'), (req, res, next) => {
     }
 });
 router.post('/package', function (req, res, next) {
-    const hotDeal = new HotDeal(req.body); 
+    const pkgs = new HotDeal(req.body); 
+    
+    pkgs.imageUrl = 'assets/'+imageName; 
     console.log(imageName);
-    hotDeal.imageUrl = 'public/images/'+imageName; 
+    console.log(pkgs.imageUrl);
     // console.log(hotDeal);
-    userservice.pushPackages(hotDeal)
+    userservice.pushPackages(pkgs)
         .then(function (deal) {
             res.status(200).json(deal); // Set status before sending response
         })

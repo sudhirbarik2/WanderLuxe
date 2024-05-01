@@ -78,8 +78,8 @@ export class Navbar extends Component {
                 <nav className="navbar navbar-expand-md fixed-top transparent navbar-inverse rounded-bottom">
                     <div className="container ">
                         <div className="navbar-header ">
-                            <a className="navbar-brand navstyleBrand" href="/"><img src="./assets/wanderluxe.png" width="60 px" height="40 px" alt="WanderLuxe Logo"></img></a>
-                            {this.state.city ? <span className=" navstyleBrand"><img src="./assets/pin.png" width="17 px" height="20 px" alt="location Logo" /> {this.state.city}, {this.state.country}</span> : 'No Location'}
+                            <a className="navbar-brand navstyleBrand" href="/"><img src="http://localhost:4000/assets/wanderluxe.png" width="60 px" height="40 px" alt="WanderLuxe Logo"></img></a>
+                            {this.state.city ? <span className=" navstyleBrand"><img src="http://localhost:4000/assets/pin.png" width="17 px" height="20 px" alt="location Logo" /> {this.state.city}, {this.state.country}</span> : 'No Location'}
                         </div>
                         <button className="navbar-toggler" type="button" data-mdb-toggle="collapse"
                             data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

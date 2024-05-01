@@ -232,7 +232,7 @@ class Packages extends Component {
                     <div className="card bg-light text-dark package-card" key={mypackage.destinationId}>
                         <div className="card-body row">
                             <div className="col-md-4">
-                                <img className="package-image" src={(mypackage.imageUrl)} alt="destination comes here" />
+                                <img className="package-image" src={("http://localhost:4000/"+mypackage.imageUrl)} alt="destination comes here" />
                             </div>
                             <div className="col-md-5">
                                 <div className="featured-text text-center text-lg-left">
@@ -360,7 +360,7 @@ class Packages extends Component {
                             <div className="row">
                                 {this.state.deal ?
                                     <div className="col-md-6 text-center">
-                                        <img className="package-image" src={(this.state.deal.imageUrl)} alt="destination comes here" />
+                                        <img className="package-image" src={("http://localhost:4000/"+this.state.deal.imageUrl)} alt="destination comes here" />
                                     </div> : null}
                                 <div className="col-md-6">
                                     <h4>Package Includes:</h4>
