@@ -39,11 +39,22 @@ router.get('/destinations/:continent', function (req, res, next) {
 })
 //add new Hotdeal
 router.post('/hotDeals', function (req, res, next) {
-    hotdeal = new HotDeal(req.body);
-    userservice.pushHotDeals(hotdeal).then(function (deal) {
-        res.json(deal);
-        res.status = 200;
-    }).catch(err => next(err))
+    // hotdeal = new HotDeal(req.body);
+    // userservice.pushHotDeals(hotdeal).then(function (deal) {
+    //     res.json(deal);
+    //     res.status = 200;
+    // }).catch(err => next(err))
+    const pkgs = new HotDeal(req.body); 
+    
+    pkgs.imageUrl = 'assets/'+imageName; 
+    console.log(imageName);
+    console.log(pkgs.imageUrl);
+    // console.log(hotDeal);
+    userservice.pushHotDeals(pkgs)
+        .then(function (deal) {
+            res.status(200).json(deal); // Set status before sending response
+        })
+        .catch(err => next(err));
 })
 //add new Package=================================================================
 const storage = multer.diskStorage({

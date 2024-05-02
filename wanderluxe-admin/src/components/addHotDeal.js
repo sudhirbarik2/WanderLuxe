@@ -4,7 +4,7 @@ import '../register.css'
 import axios from 'axios';
 // import { useParams } from 'react-router-dom';
 // import Pkg from '../misc/pkgModel';
-function AddData() {
+function AddHotDeal() {
   // const { page } = useParams();
   const [days, setDays] = useState(0);
   const [noOfPkg, setNoOfPkg] = useState(1);
@@ -174,7 +174,7 @@ function AddData() {
     };
 
     console.log(obj);
-    axios.post('http://localhost:4000/package/package', obj)
+    axios.post('http://localhost:4000/package/hotDeals', obj)
       .then(response => {
         console.log("Success");
         // setValidateformFile(false)
@@ -264,7 +264,7 @@ function AddData() {
     // setValidation(v)
   return (
     <div>
-      <h1>Enter Package Data</h1><br /><br />
+      <h1>Enter Hot Deal</h1><br /><br />
       <div className='bg'>
         <div className='row'>
           <div className='col-md-3'></div>
@@ -404,4 +404,4 @@ function AddData() {
   );
 }
 
-export default AddData;
+export default AddHotDeal;

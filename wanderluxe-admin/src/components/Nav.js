@@ -16,7 +16,6 @@ function Navbar() {
   const [loadHome, setLoadHome] = useState(false);
   const userId = sessionStorage.getItem("userId");
   // const navigate = useNavigate();
-  console.log(userId);
   function logout() {
     sessionStorage.clear();
     setLoadHome(true)
@@ -41,7 +40,7 @@ function Navbar() {
               title="Add Data"
               menuVariant="dark"
             >
-              <NavDropdown.Item href="#action/3.1">Hot Deals</NavDropdown.Item>
+              <NavDropdown.Item href="/addHotDeals">Hot Deals</NavDropdown.Item>
               <NavDropdown.Item href="/addData">Packages</NavDropdown.Item>
               {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
             </NavDropdown>
@@ -51,7 +50,7 @@ function Navbar() {
               menuVariant="dark"
             >
               <NavDropdown.Item href="#action/3.1">Hot Deals</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Packages</NavDropdown.Item>
+              <NavDropdown.Item href="/removePKG">Packages</NavDropdown.Item>
             </NavDropdown>
             <li className="nav-item">
               <a className="nav-link " href="#">User Management</a>
