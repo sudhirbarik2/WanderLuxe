@@ -49,11 +49,11 @@ function Navbar() {
               title="Delete Data"
               menuVariant="dark"
             >
-              <NavDropdown.Item href="#action/3.1">Hot Deals</NavDropdown.Item>
+              <NavDropdown.Item href="/removeHD">Hot Deals</NavDropdown.Item>
               <NavDropdown.Item href="/removePKG">Packages</NavDropdown.Item>
             </NavDropdown>
             <li className="nav-item">
-              <a className="nav-link " href="#">User Management</a>
+              <a className="nav-link " href="/userManagement">User Management</a>
             </li>
             {!userId ?
               <li className="nav-item">

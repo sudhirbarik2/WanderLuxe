@@ -40,6 +40,18 @@ userService.register = (user) => {
         }
     })
 }
+userService.getUsers=()=>{
+    return userDB.getUsers().then((u) => {
+        if (u == null) {
+            let err = new Error("No users found")
+            err.status = 406
+            throw err
+        }
+        else {
+            return u;
+        }
+    })
+}
 userService.registerAdmin = (user) => {
     return userDB.checkUser(user.contactNo).then((userChk) => {
         if (userChk == null) {

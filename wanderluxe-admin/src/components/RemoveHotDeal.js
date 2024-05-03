@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import PackageCard from './PackageCard';
 import { backendUrlPackage, backendUrlBooking } from '../BackendURL';
 
-function RemovePkg() {
+function RemovehotDeal() {
 
     const [packages, setPackages] = useState([])
     const [error, setError] = useState()
@@ -13,7 +13,7 @@ function RemovePkg() {
     const [emptyFlag, setEmptyFlag]=useState(false)
     const getHotDeals = () => {
         // this.setState({ spinnerStatus: true })
-        axios.get(backendUrlPackage + "/destinations")
+        axios.get(backendUrlPackage + "/hotDeals")
             .then((response) => {
                 setPackages(response.data)
                 setrelode(!relode)
@@ -28,7 +28,7 @@ function RemovePkg() {
     }
     const takeID =(idd)=>{
         setId(idd)
-        axios.delete(backendUrlPackage+"/package/"+idd)
+        axios.delete(backendUrlPackage+"/hotDeals/"+idd)
         .then((response)=>{
             console.log("Deleted Successfull", response.data);
         })
@@ -36,14 +36,12 @@ function RemovePkg() {
             console.log(err.message);
         })
     }
-    useEffect(() => {
-        getHotDeals()
-    }, [id]);
+    
     console.log(packages);
     console.log(id);
     console.log(emptyFlag);
     return (
-        emptyFlag?<h2 className='text-danger'>Hey Admin !<br/>We do not have any packages in out DataBase</h2>:
+        emptyFlag?<h2 className='text-warning'>Hey Admin !<br/>We do not have any HotDeal in out DataBase</h2>:
         <div>
             <div className="container">
                 <PackageCard packageData={packages} setId={takeID} />
@@ -52,4 +50,4 @@ function RemovePkg() {
     );
 }
 
-export default RemovePkg;
+export default RemovehotDeal;

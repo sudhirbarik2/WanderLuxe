@@ -1008,3 +1008,27 @@ Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565449051.
 Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565479916.jpeg'
 Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565484931.jpeg'
 Error: ENOENT: no such file or directory, open 'public/images/pkg_1714565489941.jpeg'
+ReferenceError: user is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:28:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ReferenceError: user is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:29:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ReferenceError: user is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:28:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ReferenceError: user is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:28:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ReferenceError: user is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:28:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ReferenceError: user is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:28:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ReferenceError: user is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:28:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ReferenceError: user is not defined
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:28:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

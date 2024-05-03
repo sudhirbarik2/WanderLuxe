@@ -22,7 +22,14 @@ router.post('/login', function (req, res, next) {
         res.status=200;
     }).catch(err => next(err));
 })
+//get All users
+router.get('/getUsers',function(req,res,next){
+    userservice.getUsers().then(function(users){
 
+        res.json(users);
+        res.status(200)
+    }).catch(err=>next(err))
+})
 //Router to Register
 router.post('/register', function (req, res, next) {    
     const user=new User(req.body)

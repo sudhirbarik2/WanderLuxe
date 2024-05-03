@@ -99,7 +99,7 @@ router.delete('/hotDeals/:hdid', function (req, res, next) {
         res.status = 200;
     }).catch(err => next(err))
 })
-//delete new Package
+//delete a Package
 router.delete('/package/:pkgid', function (req, res, next) {
     let pkg = req.params.pkgid;
     userservice.deletePackages(pkg).then(function (deal) {

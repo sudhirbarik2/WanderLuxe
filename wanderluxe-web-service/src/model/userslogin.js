@@ -113,6 +113,16 @@ usersDB.pushUserAdmin = (user) => {
         })
     })
 }
+usersDB.getUsers=()=>{
+    return connection.getUserCollection().then((collection)=>{
+        return collection.find({}, { _id: 0 }).then((user) => {
+            if (user != null)
+                return user;
+            else
+                return null;
+        })
+    })
+}
 usersDB.getBooking = (userId) => {
     return connection.getBookingCollection().then((collection) => {
         return collection.find({ "userId": userId }, { _id: 0 }).then((bookings) => {
