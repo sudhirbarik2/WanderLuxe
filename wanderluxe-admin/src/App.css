@@ -46,3 +46,13 @@
     font-weight: bold;
     line-height: 80px; */
 }
+.animateText{
+  animation: blinker 1s linear infinite;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

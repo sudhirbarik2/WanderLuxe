@@ -78,7 +78,13 @@ usersDB.checkUser = (contactNo) => {
         })
     })
 }
-
+usersDB.userChange=(userid,type)=>{
+    newData={admin:type}
+    console.log(newData);
+    return connection.getUserCollection().then((collection)=>{
+        return collection.findOneAndUpdate({userId:userid},newData );
+    })
+}
 usersDB.getPassword = (contactNo) => {
     return connection.getUserCollection().then((collection) => {
         return collection.find({ "contactNo": contactNo }, { _id: 0, password: 1 }).then((password) => {
@@ -118,6 +124,18 @@ usersDB.getUsers=()=>{
         return collection.find({}, { _id: 0 }).then((user) => {
             if (user != null)
                 return user;
+            else
+                return null;
+        })
+    })
+}
+
+usersDB.deleteUser=(uid)=>{
+    // console.log(data);
+    return connection.getUserCollection().then((collection) => {
+        return collection.deleteOne({ "userId": uid }).then((d) => {
+            if (d)
+                return d;
             else
                 return null;
         })

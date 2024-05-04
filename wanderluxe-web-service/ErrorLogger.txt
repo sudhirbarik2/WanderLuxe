@@ -1032,3 +1032,24 @@ ReferenceError: user is not defined
 ReferenceError: user is not defined
     at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:28:18
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+CastError: Cast to ObjectId failed for value "{ userId: 'U1004' }" (type Object) at path "_id" for model "User"
+    at model.Query.exec (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4498:21)
+    at Query.then (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/query.js:4592:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ReferenceError: tyep is not defined
+    at userService.userType (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:73:37)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/routes/userRouter.js:56:17
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:365:14)
+    at param (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)

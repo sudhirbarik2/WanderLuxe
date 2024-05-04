@@ -9,7 +9,8 @@ let userSchema = Schema({
     emailId: String,
     contactNo: Number,
     password: String,
-    bookings: [String]
+    bookings: [String],
+    admin:Boolean,
 }, { collection: "User" })
 
 

@@ -68,6 +68,32 @@ userService.registerAdmin = (user) => {
         }
     })
 }
+//delete User
+
+userService.deleteUser = (uid) => {
+    return userDB.deleteUser(uid).then((cancelData) => {
+        if (cancelData == null) {
+            let err = new Error("user deletion faild")
+            err.status = 406
+            throw err
+        }
+        else {
+            return cancelData;
+
+        }
+    })
+}
+//Change user type
+userService.userType=(userid,type)=>{
+    return userDB.userChange(userid,type).then((user)=>{
+        if(user!==null) return user;
+        else{
+            let err = new Error("No user found")
+            err.status = 406
+            throw err
+        }
+    })
+}
 //Get the bookings
 userService.booking = (userId) => {
     return userDB.getBooking(userId).then((bookings) => {

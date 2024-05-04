@@ -11,6 +11,8 @@ import { BsFillTrash3Fill } from "react-icons/bs";
 
 function UserManagement() {
   const [users, setUsers] = useState([])
+  const [refetch, setRefetch] = useState(false)
+  const [errormsg, setErrorMsg] = useState('')
   function fetchUsers() {
     axios.get(backendUrlUser + "/getUsers")
       .then((response) => {
@@ -21,11 +23,34 @@ function UserManagement() {
 
       })
   }
+  function deleteUser(uid) {
+    if (uid === 'U1002') setErrorMsg('This Primary admin cannot be deleted !!')
+    else {
+      setErrorMsg('')
+      axios.delete(backendUrlUser + '/deleteUser/' + uid)
+      .then((response) => {
+        console.log("User deleted");
+
+      }).catch((e) => {
+        console.log(e.message);
+      })
+    }
+  }
+  function changeAdmin(access, id) {
+    console.log(access, id);
+    axios.put(backendUrlUser + '/changeUserType/' + id + '/' + access)
+      .then((response) => {
+        console.log("User type changed");
+
+      }).catch((e) => {
+        console.log(e.message);
+      })
+  }
   useEffect(() => {
     fetchUsers()
-  }, []);
+  }, [refetch]);
 
-  console.log(users);
+  console.log(refetch);
 
   return (
     <div>
@@ -34,8 +59,8 @@ function UserManagement() {
           {/* <header className="masthead " id="page-top"></header> */}
           <div className='row' style={{}}>
             <div className='col-md-2'></div>
-            <div className='col-md-8'><br/><br/>
-              <span className='text-warning' style={{ fontSize: "30px" }}>Registered users</span><br /><br/>
+            <div className='col-md-8'><br /><br />
+              <span className='text-warning' style={{ fontSize: "30px" }}>Registered users</span><br /><br />
               <table className="table table-dark table-bordered">
                 <thead>
                   <tr>
@@ -51,25 +76,28 @@ function UserManagement() {
                 <tbody>
                   {
                     users.map((user, id) => {
+                      let admiin;
+                      if (user.admin) admiin = 'checked'
                       return (
                         <tr key={id}>
                           <td>{user.userId}</td>
                           <td>{user.name}</td>
                           <td>{user.emailId}</td>
                           <td>{user.contactNo}</td>
-                          <td>userType</td>
+                          <td>{user.admin ? "Admin" : "User"}</td>
                           <center>
                             <td><div className="form-check form-switch">
-                              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={user.admin} onClick={() => { changeAdmin(!user.admin, user.userId); setRefetch(!refetch) }} />
                             </div></td>
                           </center>
-                          <td><BsFillTrash3Fill /></td>
+                          <td><BsFillTrash3Fill style={{ cursor: "pointer" }} onClick={() => { deleteUser(user.userId); setRefetch(!refetch) }} /></td>
                         </tr>
                       )
                     })
                   }
                 </tbody>
               </table>
+              {errormsg!==""?<span className='text-danger animateText'>{errormsg}</span>:""}
             </div>
             <div className='col-md-2'></div>
           </div>

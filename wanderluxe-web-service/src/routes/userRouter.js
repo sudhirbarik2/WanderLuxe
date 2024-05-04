@@ -33,6 +33,7 @@ router.get('/getUsers',function(req,res,next){
 //Router to Register
 router.post('/register', function (req, res, next) {    
     const user=new User(req.body)
+    user.admin=false;
     userservice.register(user).then(function (userDetails) {
         res.json(userDetails);
         res.status=200;
@@ -41,16 +42,35 @@ router.post('/register', function (req, res, next) {
 //Router to register as Admin
 router.post('/registerAdmin', function (req, res, next) {    
     const user=new User(req.body)
+    user.admin=true;
     userservice.registerAdmin(user).then(function (userDetails) {
         res.json(userDetails);
         res.status=200;
     }).catch(err => next(err));
+})
+//modifyUserType
+router.put('/changeUserType/:userId/:type',function(req,res,next){
+    let user=req.params.userId;
+    let type=req.params.type;
+    
+    userservice.userType(user,type).then(function(u){
+        res.json(u);
+        res.status(200);
+    }).catch(err=>next(err))
 })
 //router to get the booking details
 router.get('/getBookings/:userId', function (req, res, next) {    
     let userId=req.params.userId;   
     userservice.booking(userId).then(function (bookingDetails) {
         res.json(bookingDetails);
+        res.status=200;
+    }).catch(err => next(err));
+})
+//Delete user by id
+router.delete('/deleteUser/:userId', function (req, res, next) {    
+    let userId=req.params.userId;   
+    userservice.deleteUser(userId).then(function (u) {
+        res.json(u);
         res.status=200;
     }).catch(err => next(err));
 })

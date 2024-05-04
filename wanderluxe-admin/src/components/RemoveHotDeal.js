@@ -36,7 +36,9 @@ function RemovehotDeal() {
             console.log(err.message);
         })
     }
-    
+    useEffect(() => {
+        getHotDeals()
+    }, [id]);
     console.log(packages);
     console.log(id);
     console.log(emptyFlag);
