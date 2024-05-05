@@ -32,7 +32,7 @@ function Navbar() {
         <div className="d-flex ms-auto order-5" style={{ paddingRight: "30px" }} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link hoverEffect" href="/">Home </a>
+              <a className="nav-link hoverEffect" href="/home">Home </a>
             </li>
 
             <NavDropdown

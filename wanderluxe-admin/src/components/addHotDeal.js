@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from "react";
 import '../register.css'
 import axios from 'axios';
+import Navbar from './Nav';
 // import { useParams } from 'react-router-dom';
 // import Pkg from '../misc/pkgModel';
 function AddHotDeal() {
@@ -264,6 +265,7 @@ function AddHotDeal() {
     // setValidation(v)
   return (
     <div>
+      <Navbar /><br /><br /><br />
       <h1>Enter Hot Deal</h1><br /><br />
       <div className='bg'>
         <div className='row'>

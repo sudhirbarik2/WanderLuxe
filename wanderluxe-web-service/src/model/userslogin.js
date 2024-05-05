@@ -24,7 +24,7 @@ usersDB.generateAdminId = () => {
                 numId = parseInt(id.match(/(\d+)/))
                 matches.push(numId);
             })
-            return ("ADMIN" + (Math.max(...matches) + 1));
+            return ("U" + (Math.max(...matches) + 1));
         })
     })
 }

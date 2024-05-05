@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import PackageCard from './PackageCard';
 import { backendUrlPackage, backendUrlBooking } from '../BackendURL';
-
+import Navbar from './Nav';
 function RemovePkg() {
 
     const [packages, setPackages] = useState([])
@@ -45,6 +45,7 @@ function RemovePkg() {
     return (
         emptyFlag?<h2 className='text-danger'>Hey Admin !<br/>We do not have any packages in out DataBase</h2>:
         <div>
+            <Navbar /><br /><br /><br />
             <div className="container">
                 <PackageCard packageData={packages} setId={takeID} />
             </div>

@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import PackageCard from './PackageCard';
 import { backendUrlPackage, backendUrlBooking } from '../BackendURL';
-
+import Navbar from './Nav';
 function RemovehotDeal() {
 
     const [packages, setPackages] = useState([])
@@ -45,6 +45,7 @@ function RemovehotDeal() {
     return (
         emptyFlag?<h2 className='text-warning'>Hey Admin !<br/>We do not have any HotDeal in out DataBase</h2>:
         <div>
+            <Navbar /><br /><br /><br />
             <div className="container">
                 <PackageCard packageData={packages} setId={takeID} />
             </div>

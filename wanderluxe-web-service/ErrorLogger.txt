@@ -1053,3 +1053,69 @@ ReferenceError: tyep is not defined
     at router (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:47:12)
     at Layer.handle [as handle_request] (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/layer.js:95:5)
     at trim_prefix (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/express/lib/router/index.js:317:13)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Already registered
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

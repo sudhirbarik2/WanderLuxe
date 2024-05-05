@@ -18,6 +18,7 @@ function Login() {
               <div className="myform form ">
                 <div className="logo mb-3 note">
                   <div className="col-md-12 text-center">
+                    <h2>Hi Admin !</h2>
                     <h1>Login</h1>
                   </div>
                 </div>
@@ -30,22 +31,11 @@ function Login() {
                     <label htmlFor="exampleInputEmail1" style={{ paddingLeft: "5px" }}>Password</label>
                     <input type="password" name="password" id="password" className="form-control" aria-describedby="emailHelp" placeholder="Enter Password" />
                   </div>
-                  <div className="form-group">
-                    <p className="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
-                  </div>
-                  <div className="col-md-12 text-center ">
+
+                  <div className="col-md-12 text-center " style={{marginTop:"5px"}}>
                     <button type="submit" className=" btn btn-block mybtn btn-primary tx-tfm" onClick={log}>Login</button>
                   </div>
-                  <div className="col-md-12 ">
-                    <div className="login-or">
-                      <hr className="hr-or" />
-                      <span className="span-or">or</span>
-                    </div>
-                  </div>
 
-                  <div className="form-group">
-                    <p className="text-center">Don't have account? <a href="/register" id="signup">Sign up here</a></p>
-                  </div>
                 </form>
 
               </div>
