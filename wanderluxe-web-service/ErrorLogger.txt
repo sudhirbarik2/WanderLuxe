@@ -1119,3 +1119,48 @@ Error: Already registered
 Error: Already registered
     at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:64:23
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

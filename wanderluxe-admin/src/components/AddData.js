@@ -1,8 +1,10 @@
 import React from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import '../register.css'
 import axios from 'axios';
 import Navbar from './Nav';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+
 // import { useParams } from 'react-router-dom';
 // import Pkg from '../misc/pkgModel';
 function AddData() {
@@ -41,6 +43,7 @@ function AddData() {
   const [validatediscounts, setValidatediscounts] = useState(false)
   const [validateavailability, setValidateavailability] = useState(false)
   const [validateformFile, setValidateformFile] = useState(false)
+  const [Uname, setUname]=useState('')
   // ===========================================================
   function itinerary(event) {
     let day = event.target.value;
@@ -58,6 +61,9 @@ function AddData() {
   function pkgsRemove() {
     if (noOfPkg > 1) setNoOfPkg(noOfPkg - 1)
   }
+  useEffect(() => {
+    setUname(sessionStorage.getItem('userId'))
+},[]);
   //=====================================================================
   function handleChange(event) {
     let id = (event.target.id);
@@ -260,9 +266,12 @@ function AddData() {
 
   }
   let v= validateitinerary && validatecontinent && validateabout && validatepkginc && validatehighL && validatetourPace && validatename && validatenoOfNights && validateflightCharges && validatechargePP && validatediscounts && validateavailability && validateformFile
-    console.log("validation: ",v);
+    // console.log("validation: ",v);
     // console.log(page);
     // setValidation(v)
+    // console.log(Uname);
+    // if(!Uname) return <Navigate replace to="/" />
+    // else
   return (
     <div>
       <Navbar /><br /><br /><br />

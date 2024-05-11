@@ -3,14 +3,17 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import PackageCard from './PackageCard';
 import { backendUrlPackage, backendUrlBooking } from '../BackendURL';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+
 import Navbar from './Nav';
 function RemovePkg() {
 
     const [packages, setPackages] = useState([])
     const [error, setError] = useState()
-    const [id,setId]=useState()
-    const [relode, setrelode]=useState(false)
-    const [emptyFlag, setEmptyFlag]=useState(false)
+    const [id, setId] = useState()
+    const [relode, setrelode] = useState(false)
+    const [emptyFlag, setEmptyFlag] = useState(false)
+    const [Uname, setUname] = useState('')
     const getHotDeals = () => {
         // this.setState({ spinnerStatus: true })
         axios.get(backendUrlPackage + "/destinations")
@@ -18,7 +21,7 @@ function RemovePkg() {
                 setPackages(response.data)
                 setrelode(!relode)
                 setId('D0')
-                if(response.data.length <=0){
+                if (response.data.length <= 0) {
                     setEmptyFlag(true)
                 }
             })
@@ -26,15 +29,18 @@ function RemovePkg() {
                 setError(error.message)
             })
     }
-    const takeID =(idd)=>{
+    useEffect(() => {
+        setUname(sessionStorage.getItem('userId'))
+    }, []);
+    const takeID = (idd) => {
         setId(idd)
-        axios.delete(backendUrlPackage+"/package/"+idd)
-        .then((response)=>{
-            console.log("Deleted Successfull", response.data);
-        })
-        .catch((err)=>{
-            console.log(err.message);
-        })
+        axios.delete(backendUrlPackage + "/package/" + idd)
+            .then((response) => {
+                console.log("Deleted Successfull", response.data);
+            })
+            .catch((err) => {
+                console.log(err.message);
+            })
     }
     useEffect(() => {
         getHotDeals()
@@ -42,15 +48,17 @@ function RemovePkg() {
     console.log(packages);
     console.log(id);
     console.log(emptyFlag);
-    return (
-        emptyFlag?<h2 className='text-danger'>Hey Admin !<br/>We do not have any packages in out DataBase</h2>:
-        <div>
-            <Navbar /><br /><br /><br />
-            <div className="container">
-                <PackageCard packageData={packages} setId={takeID} />
-            </div>
-        </div>
-    );
+    // if (!Uname) return <Navigate replace to="/" />
+    // else
+        return (
+            emptyFlag ? <h2 className='text-danger'>Hey Admin !<br />We do not have any packages in out DataBase</h2> :
+                <div>
+                    <Navbar /><br /><br /><br />
+                    <div className="container">
+                        <PackageCard packageData={packages} setId={takeID} />
+                    </div>
+                </div>
+        );
 }
 
 export default RemovePkg;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link, Navigate } from 'react-router-dom';
 import '../App.css'
 import '../index.css'
 import '../Home.css'
@@ -22,8 +22,8 @@ function UserManagement() {
   const [erremailId, seteerrmailId] = useState('')
   const [errcontactNo, seterrcontactNo] = useState('')
   const [errpassowrd, seterrPassowrd] = useState('')
-  const [registerError, setRegisterError]=useState('')
-  const [mmooddaall, setmmooddaall]=useState('')
+  const [registerError, setRegisterError] = useState('')
+  const [mmooddaall, setmmooddaall] = useState('')
   //================
   const [buttonActive, setButtonActive] = useState(false)
   //================
@@ -32,7 +32,7 @@ function UserManagement() {
   const [errValidcontactNo, setValiderrcontactNo] = useState(false)
   const [errValidpassowrd, setValiderrPassowrd] = useState(false)
   const [errValidConfirmPassowrd, seterrValidConfirmPassowrd] = useState(false)
-
+  const [Uname, setUname] = useState('')
   //==========================================================
   const [errConfirmPassword, setErrConfirmPassword] = useState('')
   const [formData, setFormData] = useState({
@@ -71,6 +71,9 @@ function UserManagement() {
     formValidation(name, value)
 
   };
+  useEffect(() => {
+    setUname(sessionStorage.getItem('userId'))
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
     //registerAdmin
@@ -82,10 +85,10 @@ function UserManagement() {
         setmmooddaall("modal")
       }).catch(error => {
         // clears()
-      //   toast.error(error.response.data.message, {
-      //     position: 'top-center'
-      // });
-      setRegisterError(error.response.data.message)
+        //   toast.error(error.response.data.message, {
+        //     position: 'top-center'
+        // });
+        setRegisterError(error.response.data.message)
         console.log(error.response.data.message);
       })
     // You can add your validation logic here before submitting the form
@@ -227,138 +230,140 @@ function UserManagement() {
 
   console.log(buttonActive);
 
-  return (
-    <div>
-      <Navbar /><br /><br /><br />
-      <div style={{ backgroundColor: "black", marginTop: "-1%" }}>
-        <div style={{ minHeight: "100vh" }} className=''>
-          {/* <header className="masthead " id="page-top"></header> */}
-          <div className='row' style={{}}>
-            <div className='col-md-2'></div>
-            <div className='col-md-8'><br /><br />
-              <span className='text-info' style={{ fontSize: "30px" }}>Registered users</span><br /><br />
-              <table className="table table-dark table-bordered">
-                <thead>
-                  <tr>
-                    <th scope="col" className='text-info'>User ID</th>
-                    <th scope="col" className='text-info' style={{ minWidth: "200px" }}>Name</th>
-                    <th scope="col" className='text-info' >Email-id</th>
-                    <th scope="col" className='text-info'>Phone</th>
-                    <th scope='col' className='text-info'>User Type</th>
-                    <th scope='col' className='text-info'>Admin?</th>
-                    <th scope='col' className='text-info'>Remove</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {
-                    users.map((user, id) => {
-                      let admiin;
-                      if (user.admin) admiin = 'checked'
-                      return (
-                        <tr key={id}>
-                          <td>{user.userId}</td>
-                          <td>{user.name}</td>
-                          <td>{user.emailId}</td>
-                          <td>{user.contactNo}</td>
-                          <td>{user.admin ? "Admin" : "User"}</td>
-                          <center>
-                            <td><div className="form-check form-switch">
-                              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={user.admin} onClick={() => { changeAdmin(!user.admin, user.userId); setRefetch(!refetch) }} />
-                            </div></td>
-                          </center>
-                          <td><BsFillTrash3Fill style={{ cursor: "pointer" }} onClick={() => { deleteUser(user.userId); setRefetch(!refetch) }} /></td>
-                        </tr>
-                      )
-                    })
-                  }
-                </tbody>
-              </table>
-              {errormsg !== "" ? <span className='text-danger animateText'>{errormsg}</span> : ""}
-            </div>
-            <div className='col-md-2' style={{ paddingTop: "2%" }}>
+  // if (!Uname) return <Navigate replace to="/" />
+  // else
+    return (
+      <div>
+        <Navbar /><br /><br /><br />
+        <div style={{ backgroundColor: "black", marginTop: "-1%" }}>
+          <div style={{ minHeight: "100vh" }} className=''>
+            {/* <header className="masthead " id="page-top"></header> */}
+            <div className='row' style={{}}>
+              <div className='col-md-2'></div>
+              <div className='col-md-8'><br /><br />
+                <span className='text-info' style={{ fontSize: "30px" }}>Registered users</span><br /><br />
+                <table className="table table-dark table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col" className='text-info'>User ID</th>
+                      <th scope="col" className='text-info' style={{ minWidth: "200px" }}>Name</th>
+                      <th scope="col" className='text-info' >Email-id</th>
+                      <th scope="col" className='text-info'>Phone</th>
+                      <th scope='col' className='text-info'>User Type</th>
+                      <th scope='col' className='text-info'>Admin?</th>
+                      <th scope='col' className='text-info'>Remove</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {
+                      users.map((user, id) => {
+                        let admiin;
+                        if (user.admin) admiin = 'checked'
+                        return (
+                          <tr key={id}>
+                            <td>{user.userId}</td>
+                            <td>{user.name}</td>
+                            <td>{user.emailId}</td>
+                            <td>{user.contactNo}</td>
+                            <td>{user.admin ? "Admin" : "User"}</td>
+                            <center>
+                              <td><div className="form-check form-switch">
+                                <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={user.admin} onClick={() => { changeAdmin(!user.admin, user.userId); setRefetch(!refetch) }} />
+                              </div></td>
+                            </center>
+                            <td><BsFillTrash3Fill style={{ cursor: "pointer" }} onClick={() => { deleteUser(user.userId); setRefetch(!refetch) }} /></td>
+                          </tr>
+                        )
+                      })
+                    }
+                  </tbody>
+                </table>
+                {errormsg !== "" ? <span className='text-danger animateText'>{errormsg}</span> : ""}
+              </div>
+              <div className='col-md-2' style={{ paddingTop: "2%" }}>
 
-              <button type="button" className="btn btn-outline-info" data-bs-toggle="modal" onClick={()=>{setRegisterError(false)}} data-bs-target="#exampleModal">
-                Add User
-              </button>
+                <button type="button" className="btn btn-outline-info" data-bs-toggle="modal" onClick={() => { setRegisterError(false) }} data-bs-target="#exampleModal">
+                  Add User
+                </button>
 
-              <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <h5 className="modal-title" id="exampleModalLabel">Register a new user</h5>
-                      {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
-                    </div>
-                    <div className="modal-body">
-                      <div className="row" style={{ paddingBottom: "25px" }}>
-                        <div className="col-md-6">
-                          <div className="form-group" style={{ paddingBottom: "15px" }}>
-                            <input className="form-control" placeholder="Name *" type="text"
-                              name="name"
-                              value={formData.name}
-                              onChange={handleChange}
-                              required />
-                            <span className='text-danger'>{errname}</span>
+                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLabel">Register a new user</h5>
+                        {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
+                      </div>
+                      <div className="modal-body">
+                        <div className="row" style={{ paddingBottom: "25px" }}>
+                          <div className="col-md-6">
+                            <div className="form-group" style={{ paddingBottom: "15px" }}>
+                              <input className="form-control" placeholder="Name *" type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required />
+                              <span className='text-danger'>{errname}</span>
+                            </div>
+                            <div className="form-group">
+                              <input className="form-control" placeholder="Phone Number *" type="tel"
+                                name="contactNo"
+                                value={formData.contactNo}
+                                onChange={handleChange}
+                                required />
+                              <span className='text-danger'>{errcontactNo}</span>
+                            </div>
                           </div>
-                          <div className="form-group">
-                            <input className="form-control" placeholder="Phone Number *" type="tel"
-                              name="contactNo"
-                              value={formData.contactNo}
-                              onChange={handleChange}
-                              required />
-                            <span className='text-danger'>{errcontactNo}</span>
+                          <div className="col-md-6">
+                            <div className="form-group" style={{ paddingBottom: "15px" }}>
+                              <input className="form-control" placeholder="Password *" type="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                required />
+                              <span className='text-danger'>{errpassowrd}</span>
+                            </div>
+                            <div className="form-group" style={{ paddingBottom: "15px" }}>
+                              <input className="form-control" placeholder="Confirm Password *" type="password"
+                                name="confirmPassword"
+                                value={formData.confirmPassword}
+                                onChange={handleChange}
+                                required />
+                            </div>
                           </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="form-group" style={{ paddingBottom: "15px" }}>
-                            <input className="form-control" placeholder="Password *" type="password"
-                              name="password"
-                              value={formData.password}
-                              onChange={handleChange}
-                              required />
-                            <span className='text-danger'>{errpassowrd}</span>
-                          </div>
-                          <div className="form-group" style={{ paddingBottom: "15px" }}>
-                            <input className="form-control" placeholder="Confirm Password *" type="password"
-                              name="confirmPassword"
-                              value={formData.confirmPassword}
-                              onChange={handleChange}
-                              required />
-                          </div>
-                        </div>
-                        <div className="col-md-12">
-                          <div className="form-group" >
-                            <input className="form-control" placeholder="Email *" type="email"
-                              name="emailId"
-                              value={formData.emailId}
-                              onChange={handleChange}
-                              required />
-                            <span className='text-danger'>{erremailId}</span>
-                          </div>
+                          <div className="col-md-12">
+                            <div className="form-group" >
+                              <input className="form-control" placeholder="Email *" type="email"
+                                name="emailId"
+                                value={formData.emailId}
+                                onChange={handleChange}
+                                required />
+                              <span className='text-danger'>{erremailId}</span>
+                            </div>
 
-                        </div>
-                        <div className='col-md-12'>
-                          <span className='text-danger'>{errConfirmPassword}</span>
+                          </div>
+                          <div className='col-md-12'>
+                            <span className='text-danger'>{errConfirmPassword}</span>
+                          </div>
                         </div>
                       </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={clears}>Close</button>
+                        <button type="button" className="btn btn-primary" data-bs-dismiss={mmooddaall} onClick={handleSubmit} disabled={!(buttonActive && errValidConfirmPassowrd)}>Add user</button>
+
+                      </div>
+                      <span className='text-danger'>{registerError}</span>
                     </div>
-                    <div className="modal-footer">
-                      <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={clears}>Close</button>
-                      <button type="button" className="btn btn-primary" data-bs-dismiss={mmooddaall}  onClick={handleSubmit} disabled={!(buttonActive && errValidConfirmPassowrd)}>Add user</button>
-                      
-                    </div>
-                    <span className='text-danger'>{registerError}</span>
                   </div>
                 </div>
-              </div>
 
+              </div>
             </div>
+
           </div>
 
         </div>
-
       </div>
-    </div>
-  );
+    );
 }
 
 export default UserManagement;

@@ -56,3 +56,6 @@
     opacity: 0;
   }
 }
+.navbar-inner {
+  background:transparent;
+}

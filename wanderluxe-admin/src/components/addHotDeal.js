@@ -3,6 +3,8 @@ import { useState } from "react";
 import '../register.css'
 import axios from 'axios';
 import Navbar from './Nav';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+
 // import { useParams } from 'react-router-dom';
 // import Pkg from '../misc/pkgModel';
 function AddHotDeal() {
@@ -58,6 +60,9 @@ function AddHotDeal() {
   function pkgsRemove() {
     if (noOfPkg > 1) setNoOfPkg(noOfPkg - 1)
   }
+//   useEffect(() => {
+//     setUname(sessionStorage.getItem('userId'))
+// },[]);
   //=====================================================================
   function handleChange(event) {
     let id = (event.target.id);
@@ -398,9 +403,9 @@ function AddHotDeal() {
         <br />
         <div className='row'>
           <div className='col-md-5'></div>
-          <div className='col-md-2 d-grid gap-2'><button className="btn btn-outline-primary" type="button" disabled={!v} onClick={submitData}>Submit</button></div>
+          <div className='col-md-2 d-grid gap-2'><button className="btn btn-outline-primary" style={{marginBottom:"10px"}} type="button" disabled={!v} onClick={submitData}>Submit</button></div>
           <div className='col-md-5'></div>
-        </div>
+        </div><br/>
       </div>
     </div>
   );

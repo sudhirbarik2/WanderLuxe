@@ -27,12 +27,12 @@ function Navbar() {
     // if (this.state.packagePage === true) return <Redirect to={'/packages/' + this.state.continent} />
     // loadHome ?  <Redirect to="/" /> : null
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-        <a className="navbar-brand" style={{ paddingLeft: "30px" }} href="/">WanderLuxeAdmin</a>
+      <nav className="navbar navbar-inner navbar-expand-lg navbar-light fixed-top bg-light">
+        <a className="navbar-brand" style={{ paddingLeft: "30px" }} href={"/home/"+userId}>WanderLuxeAdmin</a>
         <div className="d-flex ms-auto order-5" style={{ paddingRight: "30px" }} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link hoverEffect" href="/home">Home </a>
+              <a className="nav-link hoverEffect" href={"/home/"+userId}>Home </a>
             </li>
 
             <NavDropdown

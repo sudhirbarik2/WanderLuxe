@@ -10,6 +10,7 @@ import HotDeals from './components/hotdeals'
 import Bookings from './components/bookings'
 import Packages from './components/packages'
 import Axios from 'axios';
+import Payment from './components/Payment'
 
 class App extends Component {
   constructor(props) {
@@ -129,6 +130,7 @@ class App extends Component {
               <Route exact path="/packages/:continent" component={Packages}></Route>{/* Destinations with search*/}
               <Route exact path="/book/:userId/:destinationId" component={Bookings}></Route>
               <Route exact path="/viewBookings" component={Bookings}></Route>
+              <Route exact path="/Payment" component={Payment}></Route>
               <Route path="*" render={() => <Redirect to="/" />}></Route>
             </Switch>
           </div>

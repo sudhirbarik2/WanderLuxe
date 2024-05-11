@@ -51,6 +51,7 @@ class Packages extends Component {
             ifLogin: "",
             visibleRight: false,
             goBooking: false,
+            flight: true,
         }
     }
 
@@ -157,10 +158,10 @@ class Packages extends Component {
         let finalCheckOutDate = new Date(checkOutDateinMs);
         this.setState({ checkOutDate: finalCheckOutDate.toDateString() });
         if (this.state.bookingForm.flights) {
-            let totalCost = (-(-this.state.bookingForm.noOfPersons)) * this.state.deal.chargesPerPerson + this.state.deal.flightCharges;
+            let totalCost = (this.state.bookingForm.noOfPersons * this.state.deal.chargesPerPerson) + (this.state.deal.flightCharges * this.state.bookingForm.noOfPersons);
             this.setState({ totalCharges: totalCost });
         } else {
-            let totalCost = (-(-this.state.bookingForm.noOfPersons)) * this.state.deal.chargesPerPerson;
+            let totalCost = (this.state.bookingForm.noOfPersons * this.state.deal.chargesPerPerson);
             this.setState({ totalCharges: totalCost });
         }
     }
@@ -186,7 +187,7 @@ class Packages extends Component {
         //console.log(dealId)
         //console.log(":here");
         // this.setState({ visibleRight: false });
-        
+
         sessionStorage.setItem('noOfPersons', this.state.bookingForm.noOfPersons);
         sessionStorage.setItem('checkInDate', this.state.bookingForm.date);
         sessionStorage.setItem('flight', this.state.bookingForm.flights);
@@ -232,7 +233,7 @@ class Packages extends Component {
                     <div className="card bg-light text-dark package-card" key={mypackage.destinationId}>
                         <div className="card-body row">
                             <div className="col-md-4">
-                                <img className="package-image" src={("http://localhost:4000/"+mypackage.imageUrl)} alt="destination comes here" />
+                                <img className="package-image" src={("http://localhost:4000/" + mypackage.imageUrl)} alt="destination comes here" />
                             </div>
                             <div className="col-md-5">
                                 <div className="featured-text text-center text-lg-left">
@@ -360,7 +361,7 @@ class Packages extends Component {
                             <div className="row">
                                 {this.state.deal ?
                                     <div className="col-md-6 text-center">
-                                        <img className="package-image" src={("http://localhost:4000/"+this.state.deal.imageUrl)} alt="destination comes here" />
+                                        <img className="package-image" src={("http://localhost:4000/" + this.state.deal.imageUrl)} alt="destination comes here" />
                                     </div> : null}
                                 <div className="col-md-6">
                                     <h4>Package Includes:</h4>

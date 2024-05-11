@@ -145,10 +145,10 @@ class Packages extends Component {
         let finalCheckOutDate = new Date(checkOutDateinMs);
         this.setState({ checkOutDate: finalCheckOutDate.toDateString() });
         if (this.state.bookingForm.flights) {
-            let totalCost = (-(-this.state.bookingForm.noOfPersons)) * this.state.deal.chargesPerPerson + this.state.deal.flightCharges;
+            let totalCost = (this.state.bookingForm.noOfPersons * this.state.deal.chargesPerPerson) + (this.state.deal.flightCharges * this.state.bookingForm.noOfPersons);
             this.setState({ totalCharges: totalCost });
         } else {
-            let totalCost = (-(-this.state.bookingForm.noOfPersons)) * this.state.deal.chargesPerPerson;
+            let totalCost = (this.state.bookingForm.noOfPersons * this.state.deal.chargesPerPerson);
             this.setState({ totalCharges: totalCost });
         }
     }
