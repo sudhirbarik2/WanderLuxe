@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { backendUrlUser } from '../BackendURL';
 import { useAuth0 } from "@auth0/auth0-react";
 import { ToastContainer, toast } from 'react-toastify';
@@ -61,11 +61,8 @@ class Login extends Component {
                 sessionStorage.setItem("userId", userId);
                 sessionStorage.setItem("userName", response.data.name);
                 this.setState({ loadHome: true, userId: userId, userName: response.data.name }, () => {
-                    window.location.reload();
+                    // window.location.reload();
                 })
-
-                //let action = UserObj.setForm(response.data.name,this.state.loadHome);
-                //this.props.dispatch(action);
             }).catch(error => {
                 this.setState({ errorMessage: error.message, loginError: "Contact number or password incorrect !" });
                 sessionStorage.clear();
@@ -124,10 +121,11 @@ class Login extends Component {
     }
 
     render() {
-        if (this.state.loadHome === true) return <Redirect to={'/home'} />
+        console.log(this.state.loadHome);
+        if (this.state.loadHome === true) return <Navigate to={'/'} />
         //console.log('/home/' + this.state.userId);
 
-        if (this.state.loadRegister === true) return <Redirect to={'/register'} />
+        if (this.state.loadRegister === true) return <Navigate to={'/register'} />
         return (
             <div>
                 <Navbar />

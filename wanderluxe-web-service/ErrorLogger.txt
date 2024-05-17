@@ -1164,3 +1164,39 @@ Error: Incorrect password
 Error: Incorrect password
     at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+TypeError: Cannot read properties of undefined (reading 'noOfNights')
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:303:98
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+TypeError: Cannot read properties of undefined (reading 'noOfNights')
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:303:98
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+TypeError: Cannot read properties of undefined (reading 'noOfNights')
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:303:98
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:15:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

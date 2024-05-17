@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link, Navigate } from 'react-router-dom';
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import Register from "./register";
@@ -33,16 +33,6 @@ class Home extends Component {
         }
 
     }
-    // state = {
-    //     continent: "",
-    //     packagePage: false,
-    //     successMessage: "",
-    //     homePage: "",
-    //     emailId: "",
-    //     country: null,
-    //     city: null,
-    //     region: '',
-    // };
     onClick = (event) => {
         this.setState({ dialog_visible: true })
     }
@@ -71,20 +61,9 @@ class Home extends Component {
 
     handleClick = (event) => {
         event.preventDefault();
-        // const target = event.target;
-        // const name = target.name;
-        // const value = target.value;
-        // console.log(name,value);
-        // if (value === '') {
-        //     this.setState({ successMessage: "Please Enter a mail" });
-        // }
-        // else {
         toast("Thank you for subscribing. Updates will be sent to the subscribing Email ID", {
             position: 'top-center'
         })
-        // this.setState({ successMessage: "Thank you for subscribing. Updates will be sent to the subscribing Email ID" });
-        // alert("Thank you for subscribing. Updates will be sent to the subscribing Email ID")
-        // }
     }
 
     getPackages = () => {
@@ -116,7 +95,7 @@ class Home extends Component {
     }
     render() {
 
-        if (this.state.packagePage === true) return <Redirect to={'/packages/' + this.state.continent} />
+        if (this.state.packagePage === true) return <Navigate to={'/packages/' + this.state.continent} />
 
         return (
             <div>
@@ -223,7 +202,7 @@ class Home extends Component {
 
                             <div className="col-md-4 mb-3 mb-md-0">
                                 <div className="card py-4 h-100">
-                                    <div className="card-body text-center">
+                                    <div className="card-body text-center ">
                                         <h4 className="text-uppercase m-0">Phone</h4>
                                         <hr className="my-4" />
                                         <div className="small text-black-50">+91 1234123456</div>

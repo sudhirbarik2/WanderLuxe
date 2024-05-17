@@ -4,7 +4,7 @@ import { ProgressSpinner } from 'primereact/progressspinner';
 import { Sidebar } from 'primereact/sidebar';
 import { TabView, TabPanel } from 'primereact/tabview';
 import { InputSwitch } from 'primereact/inputswitch';
-import { BrowserRouter as Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Link, Navigate } from "react-router-dom";
 import { backendUrlPackage, backendUrlBooking } from '../BackendURL';
 // Importing toastify module
 // import { toast } from "react-toastify";
@@ -50,7 +50,9 @@ class Packages extends Component {
             checkOutDate: new Date(),
             visibleRight: false,
             ifLogin: "",
-            spinnerStatus: false
+            spinnerStatus: false,
+            flight: true,
+            gotoBooking: false,
         }
     }
 
@@ -172,7 +174,7 @@ class Packages extends Component {
     }
     loadBookingPage = (dealId) => {
         // this.setState({ visibleRight: false });
-        
+
         sessionStorage.setItem('noOfPersons', this.state.bookingForm.noOfPersons);
         sessionStorage.setItem('checkInDate', this.state.bookingForm.date);
         sessionStorage.setItem('flight', this.state.bookingForm.flights);
@@ -225,7 +227,7 @@ class Packages extends Component {
                     <div className="card bg-light text-dark package-card" key={mypackage.destinationId}>
                         <div className="card-body row">
                             <div className="col-md-4">
-                                <img className="package-image" src={("http://localhost:4000/"+mypackage.imageUrl)} alt="destination comes here" />
+                                <img className="package-image" src={("http://localhost:4000/" + mypackage.imageUrl)} alt="destination comes here" />
                             </div>
                             <div className="col-md-5">
                                 <div className="featured-text text-center text-lg-left">
@@ -308,15 +310,30 @@ class Packages extends Component {
             return null;
         }
     }
+    bookandpay = (dealId) => {
 
+        this.setState({ gotoBooking: true }, () => {
+            sessionStorage.setItem("charges", this.state.totalCharges);
+            sessionStorage.setItem("name", this.state.deal.name)
+            sessionStorage.setItem("persons", this.state.bookingForm.noOfPersons);
+            sessionStorage.setItem('bookingdate', this.state.bookingForm.date)
+            sessionStorage.setItem("isFlight", this.state.bookingForm.flights);
+            sessionStorage.setItem("about", this.state.deal.details.about)
+            sessionStorage.setItem('dealId', dealId);
+            console.log("Lets pay...");
+            // window.location.reload();
+        })
+
+    }
     handleSubmit = (event) => {
         event.preventDefault();
         this.calculateCharges();
     }
 
     render() {
-        if (this.state.spinnerStatus) { return (<div className="text-center"><ProgressSpinner></ProgressSpinner></div>) }
-
+        const { gotoBooking } = this.state;
+        console.log(gotoBooking);
+        if (gotoBooking) return <Navigate to={'/Payment'} />
         // if (this.state.goBooking === true) return <Redirect to={{ pathname: '/home', state: { source: 'booked' } }} />
         return (
             <div>
@@ -346,7 +363,7 @@ class Packages extends Component {
                             <div className="row">
                                 {this.state.deal ?
                                     <div className="col-md-6 text-center">
-                                        <img className="package-image" src={("http://localhost:4000/"+this.state.deal.imageUrl)} alt="destination comes here" />
+                                        <img className="package-image" src={("http://localhost:4000/" + this.state.deal.imageUrl)} alt="destination comes here" />
                                     </div> : null}
 
                                 <div className="col-md-6">
@@ -419,7 +436,7 @@ class Packages extends Component {
                             }
 
                             <div className="text-center">
-                                <button disabled={!this.state.bookingFormValid.buttonActive} className="btn btn-success" onClick={() => this.loadBookingPage(this.state.deal.destinationId)}>Book</button>
+                                <button disabled={!this.state.bookingFormValid.buttonActive} className="btn btn-success" onClick={() => this.bookandpay(this.state.deal.destinationId)}>Book</button>
                                 &nbsp; &nbsp; &nbsp;
                                 <button type="button" className="btn btn-link" onClick={(e) => this.setState({ showItinerary: false, donBooking: false })}>Cancel</button>
                             </div>

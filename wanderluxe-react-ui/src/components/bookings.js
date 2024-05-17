@@ -96,11 +96,11 @@ class HotDeals extends Component {
                                 {/* var anotherDate = new Date("2022/11/15"); */}
 
                             </div>
-                            <div className="col-ms-2">
-                                <h5 className="card-text">Fare Details: ₹ {book.totalCharges}</h5>
+                            <div className="col-ms-2 col-md-2" >
+                                <h5 className="card-text" style={{paddingLeft:"12px"}}>Fare Details: ₹ {book.totalCharges}</h5>
                                 {/* <h6 className="card-text text-danger" onClick={this.deleteBooking(this.state.booked.bookingId)}>Claim Refund</h6> */}
-                                <button className="nav-link btn btn-link" disabled={(Math.round((this.state.today - new Date(book.checkInDate)) / (1000 * 3600 * 24))) >= 0} onClick={() => this.deleteBooking(book.bookingId)}>Claim Refund</button>
-                                <p>{Math.round((this.state.today - new Date(book.checkInDate)) / (1000 * 3600 * 24)) > 0 ? <span className="text-success">Trip completed</span> : <span className="text-warning">{(Math.round((new Date(book.checkInDate) - this.state.today) / (1000 * 3600 * 24)))}&nbsp; Days remaining</span>}</p>
+                                <button className="nav-link btn btn-link" style={{paddingLeft:"12px"}} disabled={(Math.round((this.state.today - new Date(book.checkInDate)) / (1000 * 3600 * 24))) >= 0} onClick={() => this.deleteBooking(book.bookingId)}>Claim Refund</button>
+                                <p style={{paddingLeft:"12px"}}>{Math.round((this.state.today - new Date(book.checkInDate)) / (1000 * 3600 * 24)) > 0 ? <span className="text-success">Trip completed</span> : <span className="text-warning">{(Math.round((new Date(book.checkInDate) - this.state.today) / (1000 * 3600 * 24)))}&nbsp; Days remaining</span>}</p>
                             </div>
                         </div>
                     </div>

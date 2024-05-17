@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Link, Navigate } from 'react-router-dom';
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import Axios from 'axios';
@@ -120,7 +120,7 @@ export class Navbar extends Component {
                         </div>
                     </div>
                 </nav>
-                {this.state.logged_out ? <Redirect to="/" /> : null}
+                {this.state.logged_out ? <Navigate to="/" /> : null}
                 <div className="content-section implementation">
                     <Dialog
                         header="Confirmation"

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 
 import { Button } from 'primereact/button';
 import Register from "./components/register";
@@ -121,18 +121,18 @@ class App extends Component {
                 Are you sure you want to logout?
               </Dialog>
             </div> */}
-            <Switch>
-              <Route exact path="/" component={Home}></Route>
-              <Route exact path="/login" component={Login}></Route>
-              <Route exact path="/home/:userId" component={Home}></Route>
-              <Route exact path="/register" component={Register}></Route>
-              <Route exact path="/packages" component={HotDeals}></Route>{/* Only HotDeals*/}
-              <Route exact path="/packages/:continent" component={Packages}></Route>{/* Destinations with search*/}
-              <Route exact path="/book/:userId/:destinationId" component={Bookings}></Route>
-              <Route exact path="/viewBookings" component={Bookings}></Route>
-              <Route exact path="/Payment" component={Payment}></Route>
-              <Route path="*" render={() => <Redirect to="/" />}></Route>
-            </Switch>
+            <Routes>
+              <Route exact path="/" element={<Home/>}></Route>
+              <Route exact path="/login" element={<Login/>}></Route>
+              <Route exact path="/home/:userId" element={<Home/>}></Route>
+              <Route exact path="/register" element={<Register/>}></Route>
+              <Route exact path="/packages" element={<HotDeals/>}></Route>{/* Only HotDeals*/}
+              <Route exact path="/packages/:continent" element={<Packages/>}></Route>{/* Destinations with search*/}
+              <Route exact path="/book/:userId/:destinationId" element={<Bookings/>}></Route>
+              <Route exact path="/viewBookings" element={<Bookings/>}></Route>
+              <Route exact path="/Payment" element={<Payment/>}></Route>
+              <Route path="*" render={() => <Navigate to="/" />}></Route>
+            </Routes>
           </div>
         </Router>
         <footer className="bg-black text-center text-white-50">
