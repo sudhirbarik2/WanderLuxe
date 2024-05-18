@@ -60,10 +60,20 @@ class Home extends Component {
     }
 
     handleClick = (event) => {
+        let emailRegex = /^[a-zA-Z0-9]+@{1}[a-z]+\.{1}com$/
         event.preventDefault();
-        toast("Thank you for subscribing. Updates will be sent to the subscribing Email ID", {
-            position: 'top-center'
-        })
+        if (this.state.emailId.match(emailRegex)) {
+            toast("Thank you for subscribing. Updates will be sent to the subscribing Email ID", {
+                position: 'top-center'
+            })
+            
+            // this.setState({emailId:""})
+        }
+        else {
+            toast.error("Invalid Email !", {
+                position: 'top-center'
+            })
+        }
     }
 
     getPackages = () => {
@@ -99,7 +109,7 @@ class Home extends Component {
 
         return (
             <div>
-                
+
                 <header className="masthead book-page" id="page-top">
                     <div className="container d-flex h-100 align-items-center">
                         <div className="mx-auto text-center">
@@ -170,9 +180,9 @@ class Home extends Component {
                             </div>
                         </div>
                         <br />
-                        {this.state.successMessage ?
+                        {/* {this.state.successMessage ?
                             <span className="text-success text-center">{this.state.successMessage}</span> :
-                            null}
+                            null} */}
                     </div>
                 </section>
 
