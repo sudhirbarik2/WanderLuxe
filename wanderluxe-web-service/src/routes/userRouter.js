@@ -96,6 +96,15 @@ router.post('/pkgDetails', function (req, res, next) {
         res.status = 200;
     }).catch(err => next(err));
 })
+//Router for subscription
+router.post('/subscribe', function (req, res, next) {
+    let email = req.body.email;
+
+    userservice.subscribe(email).then(function (e) {
+        res.json(e);
+        res.status = 200;
+    }).catch(err => next(err));
+})
 
 module.exports = router;
 

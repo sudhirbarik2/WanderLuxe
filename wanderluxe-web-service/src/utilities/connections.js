@@ -10,47 +10,49 @@ let userSchema = Schema({
     contactNo: Number,
     password: String,
     bookings: [String],
-    admin:Boolean,
+    admin: Boolean,
 }, { collection: "User" })
+let emailSchema = Schema({
+    email: String
+},{collection:"Subscription"})
 
+let bookingSchema = Schema({
+    userId: String,
+    bookingId: String,
+    destId: String,
+    destinationName: String,
+    checkInDate: Date,
+    checkOutDate: Date,
+    noOfPersons: Number,
+    totalCharges: Number,
+    timeStamp: Date
+}, { collection: "Booking" })
 
-let bookingSchema =Schema({
-    userId:String,
-    bookingId:String,
-    destId:String,
-    destinationName:String,
-    checkInDate:Date,
-    checkOutDate:Date,
-    noOfPersons:Number,
-    totalCharges:Number,
-    timeStamp:Date
-},{collection: "Booking"})
+let packageSchema = Schema({
+    destinationId: String,
+    continent: String,
+    imageUrl: String,
+    name: String,
+    details: Object,
+    noOfNights: Number,
+    flightCharges: Number,
+    chargesPerPerson: Number,
+    discount: Number,
+    availability: Number
+}, { collection: "Package" })
 
-let packageSchema =Schema({
-    destinationId:String,
-    continent:String,
-    imageUrl:String,
-    name:String,
-    details:Object,
-    noOfNights:Number,
-    flightCharges:Number,
-    chargesPerPerson:Number,
-    discount:Number,
-    availability:Number
-},{collection: "Package"})
-
-let hotDealsSchema =Schema({
-    destinationId:String,
-    continent:String,
-    name:String,
-    imageUrl:String,
-    details:Object,
-    noOfNights:Number,
-    flightCharges:Number,
-    chargesPerPerson:Number,
-    discount:Number,
-    availability:Number
-},{collection: "HotDeals"})
+let hotDealsSchema = Schema({
+    destinationId: String,
+    continent: String,
+    name: String,
+    imageUrl: String,
+    details: Object,
+    noOfNights: Number,
+    flightCharges: Number,
+    chargesPerPerson: Number,
+    discount: Number,
+    availability: Number
+}, { collection: "HotDeals" })
 
 let collection = {};
 
@@ -63,7 +65,7 @@ collection.getUserCollection = () => {
         throw err;
     })
 }
-collection.getBookingCollection = () =>{
+collection.getBookingCollection = () => {
     //console.log("chk");
     return Mongoose.connect(url, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true }).then((database) => {
         return database.model('Booking', bookingSchema)
@@ -73,7 +75,7 @@ collection.getBookingCollection = () =>{
         throw err;
     })
 }
-collection.getPackageCollection= () =>{
+collection.getPackageCollection = () => {
     return Mongoose.connect(url, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true }).then((database) => {
         return database.model('Package', packageSchema)
     }).catch((error) => {
@@ -82,7 +84,7 @@ collection.getPackageCollection= () =>{
         throw err;
     })
 }
-collection.getHotDealsCollection= () =>{
+collection.getHotDealsCollection = () => {
     return Mongoose.connect(url, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true }).then((database) => {
         return database.model('HotDeals', hotDealsSchema)
     }).catch((error) => {
@@ -91,5 +93,13 @@ collection.getHotDealsCollection= () =>{
         throw err;
     })
 }
-
+collection.getSucbscribesCollection = () => {
+    return Mongoose.connect(url, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true }).then((database) => {
+        return database.model('Subscription', emailSchema)
+    }).catch((error) => {
+        let err = new Error("Could not connect to Database");
+        err.status = 500;
+        throw err;
+    })
+}
 module.exports = collection;

@@ -390,7 +390,20 @@ usersDB.pkgDetails = (destinationId) => {
     })
 
 }
-
+usersDB.subscribe=(email)=>{
+    console.log(email);
+    return connection.getSucbscribesCollection().then((collection) => {
+        return collection.find({ "email": email }, { _id: 0, details: 1 }).then((details) => {
+            if (details != null)
+                return collection.create({email}).then((d)=>{
+                    if(d) return d;
+                    else return null;
+            })
+            else
+                return null;
+        })
+    })
+}
 
 
 module.exports = usersDB;

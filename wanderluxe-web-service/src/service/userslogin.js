@@ -258,7 +258,20 @@ userService.deletePackages = (pkgid) => {
         }
     })
 }
+//Subscribe
+userService.subscribe=(email)=>{
+    return userDB.subscribe(email).then((data)=>{
+        if (data == null) {
+            let err = new Error("email registration failed")
+            err.status = 406
+            throw err
+        }
+        else {
+            return data;
 
+        }
+    })
+}
 
 
 
