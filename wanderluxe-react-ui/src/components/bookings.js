@@ -1,10 +1,8 @@
-import React, { Component } from "react";
 import axios from "axios";
-import { backendUrlUser, backendUrlBooking } from '../BackendURL';
 import { ProgressSpinner } from 'primereact/progressspinner';
-import { useNavigate } from "react-router-dom";
-import { Packages } from "./hotdeals";
-import Login from './login'
+import React, { Component } from "react";
+import { backendUrlBooking, backendUrlUser } from '../BackendURL';
+import Login from './login';
 import Navbar from './navbar';
 
 class HotDeals extends Component {

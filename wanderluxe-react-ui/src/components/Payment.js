@@ -1,11 +1,10 @@
-import React from 'react';
-import './Payment.css'
-import { useState, useEffect } from "react";
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import { backendUrlPackage, backendUrlBooking } from '../BackendURL';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { backendUrlBooking } from '../BackendURL';
+import './Payment.css';
 
 
 function Payment() {

@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
 import axios from 'axios';
-import { ProgressSpinner } from 'primereact/progressspinner';
-import { Sidebar } from 'primereact/sidebar';
-import { TabView, TabPanel } from 'primereact/tabview';
 import { InputSwitch } from 'primereact/inputswitch';
+import { Sidebar } from 'primereact/sidebar';
+import { TabPanel, TabView } from 'primereact/tabview';
+import React, { Component } from 'react';
 import { BrowserRouter as Link, Navigate } from "react-router-dom";
-import { backendUrlPackage, backendUrlBooking } from '../BackendURL';
+import { backendUrlBooking, backendUrlPackage } from '../BackendURL';
 // Importing toastify module
 // import { toast } from "react-toastify";
 import { ToastContainer, toast } from 'react-toastify';

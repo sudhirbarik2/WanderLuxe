@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
 import axios from 'axios';
-import { ProgressSpinner } from 'primereact/progressspinner';
 import { Sidebar } from 'primereact/sidebar';
+import React, { Component } from 'react';
 
-import { TabView, TabPanel } from 'primereact/tabview';
 import { InputSwitch } from 'primereact/inputswitch';
-import { BrowserRouter as Router, Route, Switch, Link, Navigate } from "react-router-dom";
+import { TabPanel, TabView } from 'primereact/tabview';
+import { Link, Navigate } from "react-router-dom";
 //import Book from './book';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { backendUrlUser, backendUrlPackage, backendUrlBooking } from '../BackendURL';
+import { backendUrlBooking, backendUrlPackage } from '../BackendURL';
 import Navbar from './navbar';
-import Payment from './Payment';
 
 class Packages extends Component {
     constructor(props) {

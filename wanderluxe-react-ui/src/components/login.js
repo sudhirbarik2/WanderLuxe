@@ -1,10 +1,9 @@
-import React, { Component } from "react";
 import axios from "axios";
+import React, { Component } from "react";
 import { Navigate } from 'react-router-dom';
-import { backendUrlUser } from '../BackendURL';
-import { useAuth0 } from "@auth0/auth0-react";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { backendUrlUser } from '../BackendURL';
 // import { InputText } from 'primereact/inputtext';
 // import { Button } from 'primereact/button';
 //import Register from "./register"

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
-import '../App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import '../App.css';
 import { backendUrlUser } from '../BackendURL';
 import Navbar from './navbar';
 

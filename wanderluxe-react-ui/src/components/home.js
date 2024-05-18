@@ -1,15 +1,9 @@
+import Axios from 'axios';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, Navigate } from 'react-router-dom';
-import { Dialog } from 'primereact/dialog';
-import { Button } from 'primereact/button';
-import Register from "./register";
-import Login from './login';
-import HotDeals from './hotdeals'
-import Bookings from './bookings'
-import Packages from './packages'
-import Axios from 'axios'; import { ToastContainer, toast } from 'react-toastify';
+import { Link, Navigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from './navbar';
+import HotDeals from './hotdeals';
 class Home extends Component {
     constructor(props) {
         super(props);
