@@ -89,7 +89,9 @@ class Register extends Component {
                 }
                 break;
             case "emailId":
-                let emailRegex = /^[a-zA-Z0-9]+@{1}[a-z]+\.{1}com$/
+                // let emailRegex = /^[a-zA-Z0-9.]+@{1}[a-z]+\.{1}com$/
+                //
+                let emailRegex=/^[a-zA-Z0-9.]+@{1}[a-z]+\.{1}com$/
                 if (value === '') {
                     fieldValidationErrors.email = 'Please enter your email id'
                     formValid.email = false

@@ -1,9 +1,11 @@
-import Axios from 'axios';
+import Axios from "axios";
 import React, { Component } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import HotDeals from './hotdeals';
+import { backendUrlUser } from '../BackendURL';
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -23,6 +25,7 @@ class Home extends Component {
             successMessage: "",
             homePage: "",
             emailId: "",
+            emailError: ""
 
         }
 
@@ -57,11 +60,17 @@ class Home extends Component {
         let emailRegex = /^[a-zA-Z0-9]+@{1}[a-z]+\.{1}com$/
         event.preventDefault();
         if (this.state.emailId.match(emailRegex)) {
-            toast("Thank you for subscribing. Updates will be sent to the subscribing Email ID", {
-                position: 'top-center'
-            })
-            
-            // this.setState({emailId:""})
+
+            Axios.post(backendUrlUser + '/subscribe', { "email": this.state.emailId })
+                .then(response => {
+                    toast("Thank you for subscribing. Updates will be sent to the subscribing Email ID", {
+                        position: 'top-center'
+                    })
+
+                }).catch(error => {
+                    console.log("Subscription failed");
+                    console.log(error.message);
+                })
         }
         else {
             toast.error("Invalid Email !", {
