@@ -165,8 +165,8 @@ function Login() {
 
           </MDBCol>
 
-          <MDBCol col='6' className="mb-5">
-            <div className="d-flex flex-column  justify-content-center gradient-custom-2 h-100 mb-4" style={{ marginTop: "9px" }}>
+          <MDBCol col='6' className="mb-5 d-flex flex-column  justify-content-center">
+            <div className="d-flex flex-column  justify-content-center gradient-custom-2 h-auto mb-4" style={{ marginTop: "9px" }}>
 
               <div className="text-white px-3 py-4 p-md-5 mx-md-4">
                 <h4 className="mb-4">Unleash the traveller inside you</h4>
