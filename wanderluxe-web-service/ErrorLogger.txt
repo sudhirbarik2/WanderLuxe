@@ -1241,3 +1241,30 @@ ObjectParameterError: Parameter "obj" to Document() must be an object, got Sudhi
     at Function.create (/Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/node_modules/mongoose/lib/model.js:3135:23)
     at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/model/userslogin.js:398:35
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:8:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Booking not Done
+    at /Users/sudhirbarik/Desktop/Projects/Pallabi/WanderLuxe/wanderluxe-web-service/src/service/userslogin.js:162:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
